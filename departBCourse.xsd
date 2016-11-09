@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns="http://www.w3school.com.cn"
+elementFormDefault="qualified">
+
+<xs:element name="DepartBCourses">
+    <xs:complexType>
+      	<xs:sequence>
+      		<xs:element name="Course" maxOccurs="unbounded">
+    			<xs:complexType>
+      				<xs:sequence>
+						<xs:element name="学号" type="xs:string"/>
+						<xs:element name="名称" type="xs:string"/>
+						<xs:element name="课时" type="xs:string"/>
+						<xs:element name="学分" type="xs:string"/>
+						<xs:element name="老师" type="xs:string"/>
+						<xs:element name="地点" type="xs:string"/>
+						<xs:element name="共享" type="xs:string"/>
+      				</xs:sequence>
+    			</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+</xs:schema>
