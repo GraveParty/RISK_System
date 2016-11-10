@@ -29,15 +29,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">选课系统</a>
+            <a class="navbar-brand" href="#">风险管理系统</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/index">首页 <span class="sr-only">(current)</span></a></li>
-                <li><a href="/course">我的选课</a></li>
-                <li><a href="/students">所有学生</a></li>
+                <%--<li><a href="/course">我的选课</a></li>--%>
+                <%--<li><a href="/students">所有学生</a></li>--%>
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <%--<div class="form-group">--%>
@@ -64,7 +64,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <!-- Default panel contents -->
-                <div class="panel-heading">本学院课程</div>
+                <div class="panel-heading">风险列表</div>
                 <!-- Table -->
                 <table class="table table-striped" id="resourceTable">
                     <thead>
