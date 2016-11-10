@@ -12,4 +12,5 @@ import java.util.List;
 public interface RiskService {
     List<Risk> getAllRisks();
     void addRisk(Risk risk);
+    Risk getRisk(int risk_id);
 }

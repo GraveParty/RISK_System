@@ -10,5 +10,6 @@ import java.util.List;
  */
 public interface RiskService {
     List<Risk> getAllRisks() throws RemoteException;
+    Risk getRisk(int risk_id) throws RemoteException;
     void addRisk(Risk risk) throws RemoteException;
 }

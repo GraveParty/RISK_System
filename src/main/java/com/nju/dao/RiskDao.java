@@ -90,5 +90,26 @@ public class RiskDao {
     }
 
 
+    public Risk getRisk(int risk_id) {
+        String sql = "select * from risk where *.risk_id = "+ risk_id ;
+        try {
+            ResultSet rs = stmt.executeQuery(sql);
+            int riskId = rs.getInt(1);
+            String riskName = rs.getString(2);
+            String riskContent = rs.getString(3);
+            String riskLevel = rs.getString(4);
+            String riskPossibility = rs.getString(5);
+            String riskGate = rs.getString(6);
+            String riskCreator = rs.getString(7);
+            String riskFollower = rs.getString(8);
+            String riskCreatedTime = rs.getString(9);
 
+            Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator,riskFollower,riskCreatedTime);
+            return r;
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

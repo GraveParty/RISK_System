@@ -66,7 +66,7 @@
                 <!-- Default panel contents -->
                 <div class="panel-heading">本学院课程</div>
                 <!-- Table -->
-                <table class="table table-striped">
+                <table class="table table-striped" id="resourceTable">
                     <thead>
                     <tr>
                         <th>风险编号</th>
@@ -121,7 +121,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="submit" class="btn btn-primary" id="drop-btn">确认</button>
+                <button type="button" class="btn btn-primary" id="comfirm-add-btn">确认</button>
             </div>
         </div>
     </div>
@@ -130,12 +130,12 @@
 
 
 <%--选课模态框--%>
-<div class="modal fade" id="chooseCourseModal" tabindex="-1" role="dialog" aria-labelledby="chooseCourseModalLabel">
+<div class="modal fade" id="FollowAddModal" tabindex="-1" role="dialog" aria-labelledby="chooseCourseModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="chooseCourseModalLabel">跟踪风险</h4>
+                <h4 class="modal-title" id="FollowAddModalLabel">跟踪风险</h4>
             </div>
             <div class="modal-body">
                 <form>
@@ -178,7 +178,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary" id="choose-btn">跟踪</button>
+                <button type="button" class="btn btn-primary" id="follow-btn">跟踪</button>
             </div>
         </div>
     </div>
@@ -188,6 +188,7 @@
 <script type="text/javascript" src="/assets/js/course.js"></script>
 <script>
     loadChooseModal();
+    loadAddModal();
     loadCourses();
 </script>
 </body>

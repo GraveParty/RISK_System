@@ -6,40 +6,50 @@
  * 初始化选课模态框
  */
 function loadChooseModal() {
-    $('#chooseCourseModal').on('show.bs.modal', function (event) {
+    $('#FollowAddModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget) // Button that triggered the modal
-        var courseId = button.data('course-id') // Extract info from data-* attributes
-        var courseName = button.data('course-name')
-        var courseTeacher = button.data('course-teacher')
-        var coursePlace = button.data('course-place')
-        var courseCredits = button.data('course-credits')
-        var courseDepartment = button.data('course-department')
+        var riskId = button.data('risk-id')// Extract. from data-* attributes
+        var riskName = button.data('risk-name')
+        var riskContent = button.data('risk-content')
+        var riskPossibility = button.data('risk-possibility')
+        var riskLevel = button.data('risk-level')
+        var riskGate = button.data('risk-gate')
+        var riskCreator = button.data('risk-creator')
+        var riskFollower = button.data('risk-follower')
+
+        alert(riskName);
         var modal = $(this)
-        modal.find('.modal-title').html('跟踪 <span class="text-primary">' + courseName + '</span> 风险')
-        modal.find('.modal-body input#course-teacher').val(courseTeacher)
-        modal.find('.modal-body input#course-place').val(coursePlace)
-        modal.find('.modal-body input#course-credits').val(courseCredits)
-        $('#choose-btn')[0].onclick = function () {
-            $.ajax({
-                url:"/chooseCourse",
-                type:"post",
-                data:{
-                    courseId:courseId,
-                    department:courseDepartment
-                },
-                success:function (data) {
-                    if(data){
-                        alert("选课成功");
-                        window.location.reload();
-                    }else {
-                        alert("选课失败");
-                    }
-                },
-                error:function () {
-                    alert("选课失败");
-                }
-            })
-        }
+        modal.find('.modal-title').html('跟踪 <span class="text-primary">' + " " + '</span> 风险')
+        modal.find('.modal-body input#showRisk-id').val(riskId)
+        modal.find('.modal-body input#showRisk-name').val(riskName)
+        modal.find('.modal-body input#showRisk-content').val(riskContent)
+        modal.find('.modal-body input#showRisk-possibility').val(riskPossibility)
+        modal.find('.modal-body input#showRisk-level').val(riskLevel)
+        modal.find('.modal-body input#showRisk-gate').val(riskGate)
+        modal.find('.modal-body input#showRisk-creator').val(riskCreator)
+        modal.find('.modal-body input#showRisk-follower').val(riskFollower)
+
+        // $('#follow-btn')[0].onclick = function () {
+        //     $.ajax({
+        //         url:"/chooseCourse",
+        //         type:"post",
+        //         data:{
+        //             courseId:courseId,
+        //             department:courseDepartment
+        //         },
+        //         success:function (data) {
+        //             if(data){
+        //                 alert("选课成功");
+        //                 window.location.reload();
+        //             }else {
+        //                 alert("选课失败------");
+        //             }
+        //         },
+        //         error:function () {
+        //             alert("选课失败-------------");
+        //         }
+        //     })
+        // }
     })
 }
 
@@ -47,37 +57,27 @@ function loadChooseModal() {
  * 初始化退课模态框
  */
 function loadDropModal() {
-    $('#dropCourseModal').on('show.bs.modal', function (event) {
+    $('#FollowAddModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget) // Button that triggered the modal
-        var courseId = button.data('course-id') // Extract info from data-* attributes
-        var courseName = button.data('course-name')
-        var courseTeacher = button.data('course-teacher')
-        var coursePlace = button.data('course-place')
-        var courseCredits = button.data('course-credits')
-        var courseDepartment = button.data('course-department')
+        var riskId = button.data('risk-id') // Extract info from data-* attributes
+        var riskCreator
+
         var modal = $(this)
         modal.find('.modal-title').html('确定退选 <span class="text-primary">' + courseName + '</span> 课程？')
-        modal.find('.modal-body input#course-teacher').val(courseTeacher)
-        modal.find('.modal-body input#course-place').val(coursePlace)
-        modal.find('.modal-body input#course-credits').val(courseCredits)
-        $('#drop-btn')[0].onclick = function () {
+
+        $('#follow-btn')[0].onclick = function () {
             $.ajax({
-                url:"/dropCourse",
+                url:"/getRisk",
                 type:"post",
                 data:{
-                    courseId:courseId,
-                    department:courseDepartment
+                    risk_id:riskId,
                 },
                 success:function (data) {
-                    if(data){
-                        alert("退课成功");
+                        alert("成功追踪");
                         window.location.reload();
-                    }else {
-                        alert("退课失败");
-                    }
                 },
                 error:function () {
-                    alert("退课失败");
+                    alert("追踪失败");
                 }
             })
         }
@@ -90,26 +90,20 @@ function loadDropModal() {
 function loadAddModal() {
     $('#addRiskModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget) // Button that triggered the modal
-        // var courseId = button.data('course-id') // Extract info from data-* attributes
-        // var courseName = button.data('course-name')
-        // var courseTeacher = button.data('course-teacher')
-        // var coursePlace = button.data('course-place')
-        // var courseCredits = button.data('course-credits')
-        // var courseDepartment = button.data('course-department')
-        var riskId = 0;
-        var riskName= input.data('risk-name')
-        var riskContent= input.data('risk-content')
-        var riskPossibility= input.data('risk-possibility')
-        var riskLevel= input.data('risk-level')
-        var riskGate= input.data('risk-gate')
 
 
         var modal = $(this)
         modal.find('.modal-title').html('添加风险')
-        // modal.find('.modal-body input#course-teacher').val(courseTeacher)
-        // modal.find('.modal-body input#course-place').val(coursePlace)
-        // modal.find('.modal-body input#course-credits').val(courseCredits)
-        $('#drop-btn')[0].onclick = function () {
+
+        $('#comfirm-add-btn')[0].onclick = function () {
+            var riskId = 0
+            var riskName= $("#risk-name").val()
+            var riskContent= $("#risk-content").val()
+            var riskPossibility= $("#risk-possibility").val()
+            var riskLevel= $("#risk-level").val()
+            var riskGate= $("#risk-gate").val()
+            alert(riskName);
+
             $.ajax({
                 url:"/addRisk",
                 type:"post",
@@ -121,13 +115,8 @@ function loadAddModal() {
                     riskLevel:riskLevel,
                     riskGate:riskGate
                 },
-                success:function (data) {
-                    if(data){
-                        alert("退课成功");
-                        window.location.reload();
-                    }else {
-                        alert("退课失败");
-                    }
+                success:function() {
+                    window.location.reload();
                 },
                 error:function () {
                     alert("退课失败");
@@ -155,18 +144,20 @@ function loadCourses() {
                 var riskId = data[i]['riskId'];
                 var riskName = data[i]['riskName'];
                 var riskCreator = data[i]['riskCreator'];
-                var riskCreatedTime = data[i]['riskCreatedTime'];
+                var riskContent = data[i]['riskContent'];
+                var riskFollower = data[i]['riskFollower'];
+                var riskLevel = data[i]['riskLevel'];
+                var riskPossibility = data[i]['riskPossibility'];
+                var riskGate = data[i]['riskGate'];
+                var riskCreatedTime=data[i]['riskCreatedTime'];
+
                 var content = '<tr>' +
                     '<th scope="row">' + riskId + '</th>' +
                     '<td>' + riskName + '</td>' +
                     '<td>' + riskCreator + '</td>' +
                     '<td>' + riskCreatedTime + '</td>' ;
-                // if(data[i]['isShared'] == 2){
-                //     content += '<td>已选</td>';
-                // }else {
-                //     content += '<td><a href="#" data-toggle="modal" data-target="#chooseCourseModal" data-course-id="' + courseId + '" data-course-name="' + courseName + '" data-course-place="' + coursePlace + '" data-course-teacher="' + courseTeacher + '" data-course-credits="' + courseCredits + '" data-course-department="B">选课</a></td>';
-                // }
-                content += '<td><a href="#" data-toggle="modal" data-target="#chooseCourseModal" data-course-id="' + riskId + '" data-course-name="' + riskName + '" data-course-place="' + riskCreator + '" data-course-teacher="' + riskCreatedTime + '" >跟踪</a></td>';
+
+                content += '<td><a href="#" data-toggle="modal" data-target="#FollowAddModal" risk-id="' + riskId + '" risk-name="' + riskName + '" risk-creator="' + riskCreator + '" risk-createdTime="' + riskCreatedTime + '" risk-content="' + riskContent + '" risk-follower="' + riskFollower + '" risk-level="' + riskLevel + '" risk-possibility="' + riskPossibility + '" risk-gate="' + riskGate +'" >跟踪</a></td>';
 
                 content += '<td><a href="#" data-toggle="modal" data-target="#dropCourseModal" data-course-id="' + riskId + '" data-course-name="' + riskName + '" data-course-place="' + riskCreator + '" data-course-teacher="' + riskCreatedTime +  '">删除</a></td>';
 

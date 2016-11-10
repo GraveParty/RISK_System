@@ -23,4 +23,9 @@ public class RiskServiceImpl implements RiskService{
     public void addRisk(Risk risk){
         riskDao.addRisk(risk);
     }
+
+    @Override
+    public Risk getRisk(int  risk_id){
+        return riskDao.getRisk(risk_id);
+    }
 }

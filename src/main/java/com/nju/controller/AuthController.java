@@ -132,11 +132,12 @@ public class AuthController {
 
     @RequestMapping(value = "/addRisk", method = RequestMethod.POST)
     @ResponseBody
-    public void addRisk(HttpSession session,@RequestParam String riskId,@RequestParam String riskName,@RequestParam String riskContent,@RequestParam String riskPossibility,@RequestParam String riskLevel,@RequestParam String riskGate){
-        Risk risk = new Risk(0,riskName,riskContent,riskLevel, riskPossibility, riskGate, session.getAttribute("id").toString(), "",  getTime()) ;
+    public boolean addRisk(@RequestParam String riskId,@RequestParam String riskName,@RequestParam String riskContent,@RequestParam String riskPossibility,@RequestParam String riskLevel,@RequestParam String riskGate, HttpSession session){
 
+        Risk risk = new Risk(0,riskName,riskContent,riskLevel, riskPossibility, riskGate, session.getAttribute("id").toString(), "",  getTime()) ;
         DepartBRiskImpl riskService=new DepartBRiskImpl();
         riskService.addRisk(risk);
+        return true;
     }
 
     private String getTime(){
@@ -144,6 +145,13 @@ public class AuthController {
         DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time=format.format(date);
         return time;
+    }
+
+    @RequestMapping(value = "/getRisk", method = RequestMethod.POST)
+    @ResponseBody
+    public Risk getRisk(int risk_id){
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+        return riskService.getRisk(risk_id);
     }
 
 }
