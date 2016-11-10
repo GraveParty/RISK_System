@@ -88,26 +88,78 @@ public class DepartBRiskImpl implements RiskService{
 
 
     public Risk getRisk(int risk_id) {
-        String sql = "select * from risk where *.risk_id = "+ risk_id ;
+        String sql = "select * from risk where risk_id = "+ risk_id ;
         try {
-            ResultSet rs = stmt.executeQuery(sql);
-            int riskId = rs.getInt(1);
-            String riskName = rs.getString(2);
-            String riskContent = rs.getString(3);
-            String riskLevel = rs.getString(4);
-            String riskPossibility = rs.getString(5);
-            String riskGate = rs.getString(6);
-            String riskCreator = rs.getString(7);
-            String riskFollower = rs.getString(8);
-            String riskCreatedTime = rs.getString(9);
 
-            Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator,riskFollower,riskCreatedTime);
-            return r;
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()) {
+                int riskId = rs.getInt(1);
+                String riskName = rs.getString(2);
+                String riskContent = rs.getString(3);
+                String riskLevel = rs.getString(4);
+                String riskPossibility = rs.getString(5);
+                String riskGate = rs.getString(6);
+                String riskCreator = rs.getString(7);
+                String riskFollower = rs.getString(8);
+                String riskCreatedTime = rs.getString(9);
+
+                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime);
+                return r;
+            }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return null;
+    }
+
+
+    public void deleteRisk(int  risk_id) {
+
+        //res.addAll(req.getMyOtherCourses(studentId));
+        String sql = "delete  from risk where risk_id = "+ risk_id ;
+        try {
+            boolean rs = stmt.execute(sql);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+    }
+
+
+    public void followRisk(int risk_id,String follower_id){
+        String sql = "select * from risk where risk_id = "+ risk_id ;
+
+        try {
+
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()) {
+                int riskId = rs.getInt(1);
+                String riskName = rs.getString(2);
+                String riskContent = rs.getString(3);
+                String riskLevel = rs.getString(4);
+                String riskPossibility = rs.getString(5);
+                String riskGate = rs.getString(6);
+                String riskCreator = rs.getString(7);
+                String riskFollower = rs.getString(8);
+                String riskCreatedTime = rs.getString(9);
+
+                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime);
+                r.setRiskFollower(r.getRiskFollower() +  follower_id+";") ;
+                Statement stmt2 = conn.createStatement();
+                String sql_update = " UPDATE risk SET risk_follower = '" + r.getRiskFollower() + "' WHERE risk_id = " +risk_id ;
+                System.out.println(sql_update);
+                boolean rs_update = stmt2.execute(sql_update);
+
+            }
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
     }
 
 

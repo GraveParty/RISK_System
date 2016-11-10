@@ -13,4 +13,5 @@ public interface RiskService {
     List<Risk> getAllRisks();
     void addRisk(Risk risk);
     Risk getRisk(int risk_id);
+    void deleteRisk(int risk_id);
 }

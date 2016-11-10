@@ -128,6 +128,24 @@
 </div>
 
 
+<%--删除风险--%>
+<div class="modal fade" id="deleteRiskModal" tabindex="-1" role="dialog" aria-labelledby="dropCourseModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="deleteRiskModalLabel"> 确认删除风险<sapn id="deleteRiskSpan"></sapn></h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="comfirm-delete-btn">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 <%--选课模态框--%>
 <div class="modal fade" id="FollowAddModal" tabindex="-1" role="dialog" aria-labelledby="chooseCourseModalLabel">
@@ -187,7 +205,9 @@
 <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/js/course.js"></script>
 <script>
-    loadChooseModal();
+    //loadChooseModal();
+    deleteRisk();
+    followRisk();
     loadAddModal();
     loadCourses();
 </script>

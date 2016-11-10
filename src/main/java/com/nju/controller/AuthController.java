@@ -140,6 +140,17 @@ public class AuthController {
         return true;
     }
 
+    @RequestMapping(value = "/followRisk", method = RequestMethod.POST)
+    @ResponseBody
+    public boolean followRisk(@RequestParam int risk_id, HttpSession session){
+
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+        System.out.print(risk_id+session.getAttribute("id").toString());
+        riskService.followRisk(risk_id,session.getAttribute("id").toString());
+        return true;
+    }
+
+
     private String getTime(){
         Date date = new Date();
         DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -152,6 +163,15 @@ public class AuthController {
     public Risk getRisk(int risk_id){
         DepartBRiskImpl riskService=new DepartBRiskImpl();
         return riskService.getRisk(risk_id);
+    }
+
+    @RequestMapping(value = "/deleteRisk", method = RequestMethod.POST)
+    @ResponseBody
+    public void deleteRisk(String risk_id){
+        System.out.println(risk_id);
+        int riskid=Integer.valueOf(risk_id);
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+        riskService.deleteRisk(riskid);
     }
 
 }

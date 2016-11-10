@@ -28,4 +28,9 @@ public class RiskServiceImpl implements RiskService{
     public Risk getRisk(int  risk_id){
         return riskDao.getRisk(risk_id);
     }
+
+    @Override
+    public void deleteRisk(int risk_id){
+        riskDao.deleteRisk(risk_id);
+    }
 }

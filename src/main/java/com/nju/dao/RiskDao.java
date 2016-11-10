@@ -89,6 +89,20 @@ public class RiskDao {
 
     }
 
+    public void deleteRisk(int  risk_id) {
+
+        //res.addAll(req.getMyOtherCourses(studentId));
+        String sql = "delete  from risk where risk_id = "+ risk_id ;
+        try {
+            boolean rs = stmt.execute(sql);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+    }
+
 
     public Risk getRisk(int risk_id) {
         String sql = "select * from risk where *.risk_id = "+ risk_id ;

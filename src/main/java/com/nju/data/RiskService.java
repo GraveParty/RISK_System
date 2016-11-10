@@ -12,4 +12,6 @@ public interface RiskService {
     List<Risk> getAllRisks() throws RemoteException;
     Risk getRisk(int risk_id) throws RemoteException;
     void addRisk(Risk risk) throws RemoteException;
+    void deleteRisk(int risk_id) throws RemoteException;
+    void followRisk(int risk_id,String follower_id) throws RemoteException;
 }
