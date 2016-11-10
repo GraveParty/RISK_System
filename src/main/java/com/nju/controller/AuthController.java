@@ -1,9 +1,13 @@
 package com.nju.controller;
 
+import com.nju.data.DepartBRiskImpl;
 import com.nju.model.Course;
+import com.nju.model.Risk;
 import com.nju.model.Student;
 import com.nju.service.CourseService;
 import com.nju.service.StudentService;
+import com.nju.service.RiskService;
+import com.nju.service.impl.RiskServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +16,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Map;
@@ -27,6 +34,9 @@ public class AuthController {
     private CourseService courseService;
     @Autowired
     private StudentService studentService;
+
+
+   // private RiskService riskService;
 
     @RequestMapping(value = "/login" , method = RequestMethod.GET)
     public String login(){
@@ -112,4 +122,28 @@ public class AuthController {
     public String students(){
         return "/students";
     }
+
+    @RequestMapping(value = "/getAllRisks", method = RequestMethod.POST)
+    @ResponseBody
+    public List<Risk> getAllRisks(){
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+        return riskService.getAllRisks();
+    }
+
+    @RequestMapping(value = "/addRisk", method = RequestMethod.POST)
+    @ResponseBody
+    public void addRisk(HttpSession session,@RequestParam String riskId,@RequestParam String riskName,@RequestParam String riskContent,@RequestParam String riskPossibility,@RequestParam String riskLevel,@RequestParam String riskGate){
+        Risk risk = new Risk(0,riskName,riskContent,riskLevel, riskPossibility, riskGate, session.getAttribute("id").toString(), "",  getTime()) ;
+
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+        riskService.addRisk(risk);
+    }
+
+    private String getTime(){
+        Date date = new Date();
+        DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String time=format.format(date);
+        return time;
+    }
+
 }

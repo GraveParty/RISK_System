@@ -15,7 +15,7 @@ function loadChooseModal() {
         var courseCredits = button.data('course-credits')
         var courseDepartment = button.data('course-department')
         var modal = $(this)
-        modal.find('.modal-title').html('确定选择 <span class="text-primary">' + courseName + '</span> 课程')
+        modal.find('.modal-title').html('跟踪 <span class="text-primary">' + courseName + '</span> 风险')
         modal.find('.modal-body input#course-teacher').val(courseTeacher)
         modal.find('.modal-body input#course-place').val(coursePlace)
         modal.find('.modal-body input#course-credits').val(courseCredits)
@@ -84,103 +84,102 @@ function loadDropModal() {
     })
 }
 
+/**
+ * 初始化添加风险态框
+ */
+function loadAddModal() {
+    $('#addRiskModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        // var courseId = button.data('course-id') // Extract info from data-* attributes
+        // var courseName = button.data('course-name')
+        // var courseTeacher = button.data('course-teacher')
+        // var coursePlace = button.data('course-place')
+        // var courseCredits = button.data('course-credits')
+        // var courseDepartment = button.data('course-department')
+        var riskId = 0;
+        var riskName= input.data('risk-name')
+        var riskContent= input.data('risk-content')
+        var riskPossibility= input.data('risk-possibility')
+        var riskLevel= input.data('risk-level')
+        var riskGate= input.data('risk-gate')
+
+
+        var modal = $(this)
+        modal.find('.modal-title').html('添加风险')
+        // modal.find('.modal-body input#course-teacher').val(courseTeacher)
+        // modal.find('.modal-body input#course-place').val(coursePlace)
+        // modal.find('.modal-body input#course-credits').val(courseCredits)
+        $('#drop-btn')[0].onclick = function () {
+            $.ajax({
+                url:"/addRisk",
+                type:"post",
+                data:{
+                    riskId:riskId,
+                    riskName:riskName,
+                    riskContent:riskContent,
+                    riskPossibility:riskPossibility,
+                    riskLevel:riskLevel,
+                    riskGate:riskGate
+                },
+                success:function (data) {
+                    if(data){
+                        alert("退课成功");
+                        window.location.reload();
+                    }else {
+                        alert("退课失败");
+                    }
+                },
+                error:function () {
+                    alert("退课失败");
+                }
+            })
+        }
+    })
+}
+
+
+
+
 function loadCourses() {
     $.ajax({
-        url:"/getCourses",
+        url:"/getAllRisks",
         type:"post",
         data:{
-            studentId:10001
+
         },
+
         success:function (data) {
             console.log(data);
-            var courseList = $("#course-list");
+            var courseList = $("#risk-list");
             for (var i = 0; i < data.length; i++){
-                var courseId = data[i]['courseId'];
-                var courseName = data[i]['courseName'];
-                var courseTeacher = data[i]['teacherName'];
-                var coursePlace = data[i]['coursePlace'];
-                var courseCredits = data[i]['coursePoint'];
-                var courseTime = data[i]['courseTime'];
+                var riskId = data[i]['riskId'];
+                var riskName = data[i]['riskName'];
+                var riskCreator = data[i]['riskCreator'];
+                var riskCreatedTime = data[i]['riskCreatedTime'];
                 var content = '<tr>' +
-                    '<th scope="row">' + courseId + '</th>' +
-                    '<td>' + courseName + '</td>' +
-                    '<td>' + courseTeacher + '</td>' +
-                    '<td>' + coursePlace + '</td>' +
-                    '<td>' + courseCredits + '</td>' +
-                    '<td>' + courseTime + '</td>';
-                if(data[i]['isShared'] == 2){
-                    content += '<td>已选</td>';
-                }else {
-                    content += '<td><a href="#" data-toggle="modal" data-target="#chooseCourseModal" data-course-id="' + courseId + '" data-course-name="' + courseName + '" data-course-place="' + coursePlace + '" data-course-teacher="' + courseTeacher + '" data-course-credits="' + courseCredits + '" data-course-department="B">选课</a></td>';
-                }
+                    '<th scope="row">' + riskId + '</th>' +
+                    '<td>' + riskName + '</td>' +
+                    '<td>' + riskCreator + '</td>' +
+                    '<td>' + riskCreatedTime + '</td>' ;
+                // if(data[i]['isShared'] == 2){
+                //     content += '<td>已选</td>';
+                // }else {
+                //     content += '<td><a href="#" data-toggle="modal" data-target="#chooseCourseModal" data-course-id="' + courseId + '" data-course-name="' + courseName + '" data-course-place="' + coursePlace + '" data-course-teacher="' + courseTeacher + '" data-course-credits="' + courseCredits + '" data-course-department="B">选课</a></td>';
+                // }
+                content += '<td><a href="#" data-toggle="modal" data-target="#chooseCourseModal" data-course-id="' + riskId + '" data-course-name="' + riskName + '" data-course-place="' + riskCreator + '" data-course-teacher="' + riskCreatedTime + '" >跟踪</a></td>';
+
+                content += '<td><a href="#" data-toggle="modal" data-target="#dropCourseModal" data-course-id="' + riskId + '" data-course-name="' + riskName + '" data-course-place="' + riskCreator + '" data-course-teacher="' + riskCreatedTime +  '">删除</a></td>';
+
+
                 content += '</tr>';
                 courseList.append(content);
+
             }
         }
+
     });
 
-    $.ajax({
-        url:"/getOtherCourses",
-        type:"post",
-        success:function (data) {
-            console.log(data);
-            var courseListB = $("#course-listB");
-            var courseListC = $("#course-listC");
-            var dataB = data['A'];
-            var dataC = data['C'];
-            for (var i = 0; i < dataB.length; i++){
-                if(dataB[i]['isShared'] == 0){
-                    continue;
-                }
-                var courseId = dataB[i]['courseId'];
-                var courseName = dataB[i]['courseName'];
-                var courseTeacher = dataB[i]['teacherName'];
-                var coursePlace = dataB[i]['coursePlace'];
-                var courseCredits = dataB[i]['coursePoint'];
-                var courseTime = dataB[i]['courseTime'];
-                var content = '<tr>' +
-                    '<th scope="row">' + courseId + '</th>' +
-                    '<td>' + courseName + '</td>' +
-                    '<td>' + courseTeacher + '</td>' +
-                    '<td>' + coursePlace + '</td>' +
-                    '<td>' + courseCredits + '</td>' +
-                    '<td>' + courseTime + '</td>';
-                if(dataB[i]['isShared'] == 2){
-                    content += '<td>已选</td>';
-                }else {
-                    content += '<td><a href="#" data-toggle="modal" data-target="#chooseCourseModal" data-course-id="' + courseId + '" data-course-name="' + courseName + '" data-course-place="' + coursePlace + '" data-course-teacher="' + courseTeacher + '" data-course-credits="' + courseCredits + '" data-course-department="A">选课</a></td>';
-                }
-                content += '</tr>';
-                courseListB.append(content);
-            }
 
-            for (var i = 0; i < dataC.length; i++){
-                if(dataC[i]['isShared'] == 0){
-                    continue;
-                }
-                var courseId = dataC[i]['courseId'];
-                var courseName = dataC[i]['courseName'];
-                var courseTeacher = dataC[i]['teacherName'];
-                var coursePlace = dataC[i]['coursePlace'];
-                var courseCredits = dataC[i]['coursePoint'];
-                var courseTime = dataC[i]['courseTime'];
-                var content = '<tr>' +
-                    '<th scope="row">' + courseId + '</th>' +
-                    '<td>' + courseName + '</td>' +
-                    '<td>' + courseTeacher + '</td>' +
-                    '<td>' + coursePlace + '</td>' +
-                    '<td>' + courseCredits + '</td>' +
-                    '<td>' + courseTime + '</td>';
-                if(dataC[i]['isShared'] == 2){
-                    content += '<td>已选</td>';
-                }else {
-                    content += '<td><a href="#" data-toggle="modal" data-target="#chooseCourseModal" data-course-id="' + courseId + '" data-course-name="' + courseName + '" data-course-place="' + coursePlace + '" data-course-teacher="' + courseTeacher + '" data-course-credits="' + courseCredits + '" data-course-department="C">选课</a></td>';
-                }
-                content += '</tr>';
-                courseListC.append(content);
-            }
-        }
-    });
 }
 
 function getMyCourses() {

@@ -43,6 +43,9 @@
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
                 </div>
+
+                <a href="#" data-toggle="modal" data-target="#addRiskModal">添加</a>
+
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
@@ -86,26 +89,26 @@
 </div>
 
 <%--退课模态框--%>
-<div class="modal fade" id="dropCourseModal" tabindex="-1" role="dialog" aria-labelledby="dropCourseModalLabel">
+<div class="modal fade" id="addRiskModal" tabindex="-1" role="dialog" aria-labelledby="dropCourseModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="dropCourseModalLabel">确定退选</h4>
+                <h4 class="modal-title" id="dropCourseModalLabel">添加风险</h4>
             </div>
             <div class="modal-body">
                 <form>
                     <div class="form-group">
                         <label for="course-teacher" class="control-label">授课教师:</label>
-                        <input type="text" class="form-control" readonly="readonly" id="course-teacher">
+                        <input type="text" class="form-control"  id="course-teacher">
                     </div>
                     <div class="form-group">
                         <label for="course-place" class="control-label">授课地点:</label>
-                        <input class="form-control" readonly="readonly" id="course-place">
+                        <input class="form-control"  id="course-place">
                     </div>
                     <div class="form-group">
                         <label for="course-credits" class="control-label">学分:</label>
-                        <input class="form-control" readonly="readonly" id="course-credits">
+                        <input class="form-control"  id="course-credits">
                     </div>
                 </form>
             </div>
@@ -116,11 +119,13 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/js/course.js"></script>
 <script>
     loadDropModal();
+    loadAddModal();
     getMyCourses();
 </script>
 </body>

@@ -26,9 +26,9 @@ public class DepartBDataImpl implements DataService,StudentService {
 			String url = "jdbc:mysql://localhost:3306/YYJC_Depart_B?"
 					+ "&useUnicode=true&characterEncoding=UTF8";
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection(url, "root", "");
+			conn = DriverManager.getConnection(url, "root", "Zy502600129");
 			stmt = conn.createStatement();
-			req = new DepartBRequireImpl();
+			//req = new DepartBRequireImpl();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -90,7 +90,7 @@ public class DepartBDataImpl implements DataService,StudentService {
      */
     @Override
     public Map<String, List<Course>> getOtherCourses(int studentId) throws RemoteException{
-    	return req.getOtherCourses(studentId);
+    	return null;
         
     }
 
@@ -101,7 +101,7 @@ public class DepartBDataImpl implements DataService,StudentService {
     @Override
     public List<Course> getMyCourses(int studentId) throws RemoteException{
     	List<Course> res = new ArrayList<Course>();
-    	res.addAll(req.getMyOtherCourses(studentId));
+    	//res.addAll(req.getMyOtherCourses(studentId));
     	String sql = "select course.* from course,choosecourse where course.编号 = chooseCourse.课程编号 and chooseCourse.学号 ="+studentId;
     	try {
 			ResultSet rs = stmt.executeQuery(sql);
@@ -145,7 +145,7 @@ public class DepartBDataImpl implements DataService,StudentService {
 				return false;
 			}
     	}else{
-    		return req.chooseOtherCourse(studentId, courseId, department);
+    		return false;
     	}
     }
 
@@ -169,7 +169,7 @@ public class DepartBDataImpl implements DataService,StudentService {
 				return false;
 			}
     	}else{
-    		return req.dropOtherCourse(studentId, courseId, department);
+    		return false;
     	}
         
     }

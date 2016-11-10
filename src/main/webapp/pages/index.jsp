@@ -40,10 +40,10 @@
                 <li><a href="/students">所有学生</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <%--<div class="form-group">--%>
+                    <%--<input type="text" class="form-control" placeholder="Search">--%>
+                <%--</div>--%>
+                <a class="btn btn-default" href="#" data-toggle="modal" data-target="#addRiskModal">添加风险</a>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -65,80 +65,69 @@
             <div class="panel panel-default">
                 <!-- Default panel contents -->
                 <div class="panel-heading">本学院课程</div>
-
                 <!-- Table -->
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>课程编号</th>
-                        <th>课程名称</th>
-                        <th>授课老师</th>
-                        <th>授课地点</th>
-                        <th>学分</th>
-                        <th>课时</th>
-                        <th>选课</th>
+                        <th>风险编号</th>
+                        <th>风险名称</th>
+                        <th>创建者</th>
+                        <th>创建时间</th>
+                        <th>跟踪</th>
+                        <th>删除</th>
                     </tr>
                     </thead>
-                    <tbody id="course-list">
-
+                    <tbody id="risk-list">
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <!-- Default panel contents -->
-                <div class="panel-heading">学院A课程</div>
 
-                <!-- Table -->
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>课程编号</th>
-                        <th>课程名称</th>
-                        <th>授课老师</th>
-                        <th>授课地点</th>
-                        <th>学分</th>
-                        <th>课时</th>
-                        <th>选课</th>
-                    </tr>
-                    </thead>
-                    <tbody id="course-listB">
-                    </tbody>
-                </table>
+</div>
+
+<%--退课模态框--%>
+<div class="modal fade" id="addRiskModal" tabindex="-1" role="dialog" aria-labelledby="dropCourseModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="dropCourseModalLabel">添加风险</h4>
             </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <!-- Default panel contents -->
-                <div class="panel-heading">学院C课程</div>
-
-                <!-- Table -->
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>课程编号</th>
-                        <th>课程名称</th>
-                        <th>授课老师</th>
-                        <th>授课地点</th>
-                        <th>学分</th>
-                        <th>课时</th>
-                        <th>选课</th>
-                    </tr>
-                    </thead>
-                    <tbody id="course-listC">
-                    </tbody>
-                </table>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="risk-name" class="control-label">风险名称:</label>
+                        <input type="text" class="form-control"  id="risk-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="risk-content" class="control-label">风险内容:</label>
+                        <input type="text" class="form-control"  id="risk-content">
+                    </div>
+                    <div class="form-group">
+                        <label for="risk-possibility" class="control-label">可能性（高中低）:</label>
+                        <input type="text" class="form-control"  id="risk-possibility">
+                    </div>
+                    <div class="form-group">
+                        <label for="risk-level" class="control-label">影响程度 高中低）:</label>
+                        <input type="text" class="form-control"  id="risk-level">
+                    </div>
+                    <div class="form-group">
+                        <label for="risk-gate" class="control-label">触发器/阈值:</label>
+                        <input type="text" class="form-control"  id="risk-gate">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="submit" class="btn btn-primary" id="drop-btn">确认</button>
             </div>
         </div>
     </div>
 </div>
+
+
 
 <%--选课模态框--%>
 <div class="modal fade" id="chooseCourseModal" tabindex="-1" role="dialog" aria-labelledby="chooseCourseModalLabel">
@@ -146,27 +135,50 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="chooseCourseModalLabel">确定选择</h4>
+                <h4 class="modal-title" id="chooseCourseModalLabel">跟踪风险</h4>
             </div>
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="course-teacher" class="control-label">授课教师:</label>
-                        <input type="text" class="form-control" readonly="readonly" id="course-teacher">
+                        <label for="showRisk-id" class="control-label">风险编号:</label>
+                        <input type="text" class="form-control" readonly="readonly" id="showRisk-id">
                     </div>
                     <div class="form-group">
-                        <label for="course-place" class="control-label">授课地点:</label>
-                        <input class="form-control" readonly="readonly" id="course-place">
+                        <label for="showRisk-name" class="control-label">风险名称:</label>
+                        <input type="text" class="form-control" readonly="readonly" id="showRisk-name">
                     </div>
                     <div class="form-group">
-                        <label for="course-credits" class="control-label">学分:</label>
-                        <input class="form-control" readonly="readonly" id="course-credits">
+                        <label for="showRisk-content" class="control-label">风险内容:</label>
+                        <input type="text" class="form-control" readonly="readonly" id="showRisk-content">
                     </div>
+                    <div class="form-group">
+                        <label for="showRisk-possibility" class="control-label">可能性（高中低）:</label>
+                        <input type="text" class="form-control" readonly="readonly" id="showRisk-possibility">
+                    </div>
+                    <div class="form-group">
+                        <label for="showRisk-level" class="control-label">影响程度（高中低）:</label>
+                        <input type="text" class="form-control" readonly="readonly" id="showRisk-level">
+                    </div>
+                    <div class="form-group">
+                        <label for="showRisk-gate" class="control-label">触发器/阈值:</label>
+                        <input type="text" class="form-control" readonly="readonly" id="showRisk-gate">
+                    </div>
+                    <div class="form-group">
+                        <label for="showRisk-creator" class="control-label">提交者:</label>
+                        <input type="text" class="form-control" readonly="readonly" id="showRisk-creator">
+                    </div>
+                    <div class="form-group">
+                        <label for="showRisk-follower" class="control-label">跟踪者:</label>
+                        <input type="text" class="form-control" readonly="readonly" id="showRisk-follower">
+                    </div>
+
+
+
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary" id="choose-btn">确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="choose-btn">跟踪</button>
             </div>
         </div>
     </div>

@@ -26,7 +26,7 @@ public class DepartBProvideImpl extends UnicastRemoteObject implements
 			String url = "jdbc:mysql://localhost:3306/YYJC_Depart_B?"
 					+ "&useUnicode=true&characterEncoding=UTF8";
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection(url, "root", "");
+			conn = DriverManager.getConnection(url, "root", "Zy502600129");
 			stmt = conn.createStatement();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
