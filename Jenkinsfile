@@ -9,7 +9,7 @@ node {
     	stage('deploy') { 
 		sh "docker stop my || true"         
 		sh "docker rm my || true"         
-		sh "docker run -p 12345:8000 -v /home/project:/usr/local/ -d maven"  
+		sh "docker run --name my -p 2333:8080 -d tomcat"  
 		sh "docker cp target/ApplicationIntegration.war my:/usr/local/tomcat/webapps"  
     	}
     	stage('results') {
