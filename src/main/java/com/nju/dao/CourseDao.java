@@ -63,6 +63,7 @@ public class CourseDao {
                 if(coursechoose.contains(id)){c.setIsShared(2);}
                 res.add(c);
             }
+            rs.close();
             return res;
 
 

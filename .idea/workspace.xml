@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20155144-0c25-42fa-a776-5793d2e4632a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java" afterPath="$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nju/dao/CourseDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/nju/dao/CourseDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nju/dao/RiskDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/nju/dao/RiskDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/course.js" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/course.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" />
     </list>
     <ignored path="ApplicationIntegration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,11 +39,23 @@
       <file leaf-file-name="CourseDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/dao/CourseDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+            <state relative-caret-position="870">
+              <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="23" />
               <folding>
-                <marker date="1478791449000" expanded="true" signature="1191:1232" ph="select 课程编号 choosecourse" />
-                <marker date="1478791449000" expanded="true" signature="1268:1288" ph="select * fro... course" />
+                <marker date="1479112749000" expanded="true" signature="1191:1232" ph="select 课程编号 choosecourse" />
+                <marker date="1479112749000" expanded="true" signature="1268:1288" ph="select * fro... course" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/dao/TestDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding>
+                <marker date="1478791449000" expanded="true" signature="604:622" ph="SELECT * FRO... book" />
               </folding>
             </state>
           </provider>
@@ -73,35 +83,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="255">
               <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DepartBRiskImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RiskDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/dao/RiskDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+              <folding>
+                <marker date="1479112749000" expanded="true" signature="1395:1413" ph="select * fro... risk" />
+                <marker date="1479112749000" expanded="true" signature="2497:2755" ph="insert into risk... " />
+                <marker date="1479112749000" expanded="true" signature="3080:3114" ph="delete from " />
+                <marker date="1479112749000" expanded="true" signature="3381:3418" ph="select * fro... risk" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RiskServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/service/impl/RiskServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+              <folding>
+                <element signature="e#690#691#0" expanded="true" />
+                <element signature="e#733#734#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DepartBRiskImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="185" column="216" selection-start-line="185" selection-start-column="216" selection-end-line="185" selection-end-column="216" />
+            <state relative-caret-position="649">
+              <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
               <folding>
                 <element signature="method#getAllRisks#0;class#DepartBRiskImpl#0" expanded="false" />
-                <marker date="1479112198000" expanded="true" signature="1144:1162" ph="select * fro... risk" />
-                <marker date="1479112198000" expanded="true" signature="2199:2226" ph="insert into risk... " />
-                <marker date="1479112198000" expanded="true" signature="2199:2469" ph="insert into risk... " />
-                <marker date="1479112198000" expanded="true" signature="2728:2763" ph="select * fro... risk" />
-                <marker date="1479112198000" expanded="true" signature="3814:3848" ph="delete from " />
-                <marker date="1479112198000" expanded="true" signature="4136:4171" ph="select * fro... risk" />
-                <marker date="1479112198000" expanded="true" signature="5079:5157" ph="UPDATE risk " />
-                <marker date="1479112198000" expanded="true" signature="5594:5629" ph="select * fro... risk" />
-                <marker date="1479112198000" expanded="true" signature="6462:6523" ph="UPDATE risk " />
-                <marker date="1479112198000" expanded="true" signature="6462:6524" ph="UPDATE risk " />
-                <marker date="1479112198000" expanded="true" signature="6462:6657" ph="UPDATE risk " />
-                <marker date="1479112198000" expanded="true" signature="6462:6668" ph="UPDATE risk " />
+                <marker date="1479112836000" expanded="true" signature="1144:1162" ph="select * fro... risk" />
+                <marker date="1479112836000" expanded="true" signature="2199:2226" ph="insert into risk... " />
+                <marker date="1479112836000" expanded="true" signature="2199:2469" ph="insert into risk... " />
+                <marker date="1479112836000" expanded="true" signature="2741:2776" ph="select * fro... risk" />
+                <marker date="1479112836000" expanded="true" signature="3851:3885" ph="delete from " />
+                <marker date="1479112836000" expanded="true" signature="4173:4208" ph="select * fro... risk" />
+                <marker date="1479112836000" expanded="true" signature="5116:5194" ph="UPDATE risk " />
+                <marker date="1479112836000" expanded="true" signature="5655:5690" ph="select * fro... risk" />
+                <marker date="1479112836000" expanded="true" signature="6523:6584" ph="UPDATE risk " />
+                <marker date="1479112836000" expanded="true" signature="6523:6585" ph="UPDATE risk " />
+                <marker date="1479112836000" expanded="true" signature="6523:6718" ph="UPDATE risk " />
+                <marker date="1479112836000" expanded="true" signature="6523:6729" ph="UPDATE risk " />
               </folding>
             </state>
           </provider>
@@ -131,14 +169,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/nju/service/RiskService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nju/dao/RiskDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nju/service/impl/RiskServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nju/data/RiskService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/assets/js/course.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nju/dao/CourseDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nju/dao/RiskDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java" />
       </list>
     </option>
   </component>
@@ -414,6 +453,130 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="nju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApplicationIntegration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RISK_System" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApplicationIntegration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RISK_System" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApplicationIntegration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RISK_System" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApplicationIntegration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RISK_System" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nju" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -946,12 +1109,12 @@
       <workItem from="1478748387395" duration="34319000" />
       <workItem from="1478792816637" duration="1149000" />
       <workItem from="1479094020815" duration="96000" />
-      <workItem from="1479101802116" duration="6035000" />
+      <workItem from="1479101802116" duration="6577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41599000" />
+    <option name="totallyTimeSpent" value="42141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="27" y="29" width="1400" height="803" extended-state="0" />
@@ -967,7 +1130,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39373296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39373296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1032,7 +1195,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nju/service/impl/RiskServiceImpl.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nju/service/impl/RiskServiceImpl.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1054,8 +1231,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1478791449000" expanded="true" signature="1191:1232" ph="select 课程编号 choosecourse" />
-            <marker date="1478791449000" expanded="true" signature="1268:1288" ph="select * fro... course" />
+            <marker date="1479112749000" expanded="true" signature="1191:1232" ph="select 课程编号 choosecourse" />
+            <marker date="1479112749000" expanded="true" signature="1268:1288" ph="select * fro... course" />
           </folding>
         </state>
       </provider>
@@ -1129,18 +1306,18 @@
           <caret line="153" column="60" selection-start-line="153" selection-start-column="60" selection-end-line="153" selection-end-column="60" />
           <folding>
             <element signature="method#getAllRisks#0;class#DepartBRiskImpl#0" expanded="false" />
-            <marker date="1479112198000" expanded="true" signature="1144:1162" ph="select * fro... risk" />
-            <marker date="1479112198000" expanded="true" signature="2199:2226" ph="insert into risk... " />
-            <marker date="1479112198000" expanded="true" signature="2199:2469" ph="insert into risk... " />
-            <marker date="1479112198000" expanded="true" signature="2728:2763" ph="select * fro... risk" />
-            <marker date="1479112198000" expanded="true" signature="3814:3848" ph="delete from " />
-            <marker date="1479112198000" expanded="true" signature="4136:4171" ph="select * fro... risk" />
-            <marker date="1479112198000" expanded="true" signature="5079:5157" ph="UPDATE risk " />
-            <marker date="1479112198000" expanded="true" signature="5594:5629" ph="select * fro... risk" />
-            <marker date="1479112198000" expanded="true" signature="6462:6523" ph="UPDATE risk " />
-            <marker date="1479112198000" expanded="true" signature="6462:6524" ph="UPDATE risk " />
-            <marker date="1479112198000" expanded="true" signature="6462:6657" ph="UPDATE risk " />
-            <marker date="1479112198000" expanded="true" signature="6462:6668" ph="UPDATE risk " />
+            <marker date="1479112836000" expanded="true" signature="1144:1162" ph="select * fro... risk" />
+            <marker date="1479112836000" expanded="true" signature="2199:2226" ph="insert into risk... " />
+            <marker date="1479112836000" expanded="true" signature="2199:2469" ph="insert into risk... " />
+            <marker date="1479112836000" expanded="true" signature="2741:2776" ph="select * fro... risk" />
+            <marker date="1479112836000" expanded="true" signature="3851:3885" ph="delete from " />
+            <marker date="1479112836000" expanded="true" signature="4173:4208" ph="select * fro... risk" />
+            <marker date="1479112836000" expanded="true" signature="5116:5194" ph="UPDATE risk " />
+            <marker date="1479112836000" expanded="true" signature="5655:5690" ph="select * fro... risk" />
+            <marker date="1479112836000" expanded="true" signature="6523:6584" ph="UPDATE risk " />
+            <marker date="1479112836000" expanded="true" signature="6523:6585" ph="UPDATE risk " />
+            <marker date="1479112836000" expanded="true" signature="6523:6718" ph="UPDATE risk " />
+            <marker date="1479112836000" expanded="true" signature="6523:6729" ph="UPDATE risk " />
           </folding>
         </state>
       </provider>
@@ -1150,9 +1327,10 @@
         <state relative-caret-position="1470">
           <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1478791449000" expanded="true" signature="1395:1413" ph="select * fro... risk" />
-            <marker date="1478791449000" expanded="true" signature="2473:2731" ph="insert into risk... " />
+            <marker date="1479112749000" expanded="true" signature="1395:1413" ph="select * fro... risk" />
+            <marker date="1479112749000" expanded="true" signature="2497:2755" ph="insert into risk... " />
+            <marker date="1479112749000" expanded="true" signature="3080:3114" ph="delete from " />
+            <marker date="1479112749000" expanded="true" signature="3381:3418" ph="select * fro... risk" />
           </folding>
         </state>
       </provider>
@@ -1186,8 +1364,8 @@
         <state relative-caret-position="600">
           <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
           <folding>
-            <marker date="1478791449000" expanded="true" signature="1191:1232" ph="select 课程编号 choosecourse" />
-            <marker date="1478791449000" expanded="true" signature="1268:1288" ph="select * fro... course" />
+            <marker date="1479112749000" expanded="true" signature="1191:1232" ph="select 课程编号 choosecourse" />
+            <marker date="1479112749000" expanded="true" signature="1268:1288" ph="select * fro... course" />
           </folding>
         </state>
       </provider>
@@ -1206,13 +1384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/service/impl/RiskServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/service/RiskService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1221,13 +1392,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/risk.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/dao/TestDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/service/StudentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1287,18 +1451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/dao/RiskDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1478791449000" expanded="true" signature="1395:1413" ph="select * fro... risk" />
-            <marker date="1478791449000" expanded="true" signature="2473:2731" ph="insert into risk... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1347,17 +1499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/dao/CourseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-          <folding>
-            <marker date="1478791449000" expanded="true" signature="1191:1232" ph="select 课程编号 choosecourse" />
-            <marker date="1478791449000" expanded="true" signature="1268:1288" ph="select * fro... course" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/course.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1384,33 +1525,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="185" column="216" selection-start-line="185" selection-start-column="216" selection-end-line="185" selection-end-column="216" />
+        <state relative-caret-position="255">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/dao/CourseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="23" />
           <folding>
-            <element signature="method#getAllRisks#0;class#DepartBRiskImpl#0" expanded="false" />
-            <marker date="1479112198000" expanded="true" signature="1144:1162" ph="select * fro... risk" />
-            <marker date="1479112198000" expanded="true" signature="2199:2226" ph="insert into risk... " />
-            <marker date="1479112198000" expanded="true" signature="2199:2469" ph="insert into risk... " />
-            <marker date="1479112198000" expanded="true" signature="2728:2763" ph="select * fro... risk" />
-            <marker date="1479112198000" expanded="true" signature="3814:3848" ph="delete from " />
-            <marker date="1479112198000" expanded="true" signature="4136:4171" ph="select * fro... risk" />
-            <marker date="1479112198000" expanded="true" signature="5079:5157" ph="UPDATE risk " />
-            <marker date="1479112198000" expanded="true" signature="5594:5629" ph="select * fro... risk" />
-            <marker date="1479112198000" expanded="true" signature="6462:6523" ph="UPDATE risk " />
-            <marker date="1479112198000" expanded="true" signature="6462:6524" ph="UPDATE risk " />
-            <marker date="1479112198000" expanded="true" signature="6462:6657" ph="UPDATE risk " />
-            <marker date="1479112198000" expanded="true" signature="6462:6668" ph="UPDATE risk " />
+            <marker date="1479112749000" expanded="true" signature="1191:1232" ph="select 课程编号 choosecourse" />
+            <marker date="1479112749000" expanded="true" signature="1268:1288" ph="select * fro... course" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/dao/TestDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="120">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <marker date="1478791449000" expanded="true" signature="604:622" ph="SELECT * FRO... book" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/dao/RiskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+          <folding>
+            <marker date="1479112749000" expanded="true" signature="1395:1413" ph="select * fro... risk" />
+            <marker date="1479112749000" expanded="true" signature="2497:2755" ph="insert into risk... " />
+            <marker date="1479112749000" expanded="true" signature="3080:3114" ph="delete from " />
+            <marker date="1479112749000" expanded="true" signature="3381:3418" ph="select * fro... risk" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/service/impl/RiskServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+          <folding>
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+          <folding>
+            <element signature="method#getAllRisks#0;class#DepartBRiskImpl#0" expanded="false" />
+            <marker date="1479112836000" expanded="true" signature="1144:1162" ph="select * fro... risk" />
+            <marker date="1479112836000" expanded="true" signature="2199:2226" ph="insert into risk... " />
+            <marker date="1479112836000" expanded="true" signature="2199:2469" ph="insert into risk... " />
+            <marker date="1479112836000" expanded="true" signature="2741:2776" ph="select * fro... risk" />
+            <marker date="1479112836000" expanded="true" signature="3851:3885" ph="delete from " />
+            <marker date="1479112836000" expanded="true" signature="4173:4208" ph="select * fro... risk" />
+            <marker date="1479112836000" expanded="true" signature="5116:5194" ph="UPDATE risk " />
+            <marker date="1479112836000" expanded="true" signature="5655:5690" ph="select * fro... risk" />
+            <marker date="1479112836000" expanded="true" signature="6523:6584" ph="UPDATE risk " />
+            <marker date="1479112836000" expanded="true" signature="6523:6585" ph="UPDATE risk " />
+            <marker date="1479112836000" expanded="true" signature="6523:6718" ph="UPDATE risk " />
+            <marker date="1479112836000" expanded="true" signature="6523:6729" ph="UPDATE risk " />
+          </folding>
         </state>
       </provider>
     </entry>

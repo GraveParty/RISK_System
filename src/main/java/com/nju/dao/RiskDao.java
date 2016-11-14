@@ -63,6 +63,7 @@ public class RiskDao {
 
                 res.add(r);
             }
+            rs.close();
             return res;
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -119,11 +120,13 @@ public class RiskDao {
             String riskCreatedTime = rs.getString(9);
 
             Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator,riskFollower,riskCreatedTime);
+            rs.close();
             return r;
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
         return null;
     }
 }

@@ -77,6 +77,7 @@ public class DepartBRiskImpl implements RiskService{
 
         try {
             boolean rs = stmt.execute(sql);
+            
 
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -106,6 +107,7 @@ public class DepartBRiskImpl implements RiskService{
                 Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime);
                 return r;
             }
+            rs.close();
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -154,6 +156,7 @@ public class DepartBRiskImpl implements RiskService{
                 boolean rs_update = stmt2.execute(sql_update);
 
             }
+            rs.close();
 
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -189,6 +192,7 @@ public class DepartBRiskImpl implements RiskService{
                 boolean rs_update = stmt2.execute(sql_update);
 
             }
+            rs.close();
 
         } catch (SQLException e) {
             // TODO Auto-generated catch block
