@@ -289,6 +289,43 @@ function followRisk() {
         }
 
 
+    $('#update-btn')[0].onclick = function () {
+        var riskId= $("#showRisk-id").val()
+        var risName= $("#showRisk-name").val()
+        var riskContent= $("#showRisk-content").val()
+        var riskPossibility= $("#showRisk-possibility").val()
+        var riskLevel= $("#showRisk-level").val()
+        var riskGate= $("#showRisk-gate").val()
+
+
+        $.ajax({
+            url:"/updateRisk",
+            type:"post",
+            data:{
+                risk_id:riskId,
+                risk_name:risName,
+                risk_content:riskContent,
+                risk_possibility:riskPossibility,
+                risk_level:riskLevel,
+                risk_gate:riskGate,
+
+
+            },
+            success:function (data) {
+                if(data){
+                    alert("修改成功");
+                    window.location.reload();
+                }else {
+                    alert("修改失败");
+                }
+            },
+            error:function () {
+                alert(riskId);
+            }
+        })
+    }
+
+
 }
 
 

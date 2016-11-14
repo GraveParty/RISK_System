@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>风险管理</title>
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <style>
         body { padding-top: 100px; }
         .user-icon {
@@ -73,7 +73,7 @@
                         <th>风险名称</th>
                         <th>创建者</th>
                         <th>创建时间</th>
-                        <th>跟踪</th>
+                        <th>跟踪/修改</th>
                         <th>删除</th>
                     </tr>
                     </thead>
@@ -163,23 +163,23 @@
                     </div>
                     <div class="form-group">
                         <label for="showRisk-name" class="control-label">风险名称:</label>
-                        <input type="text" class="form-control" readonly="readonly" id="showRisk-name">
+                        <input type="text" class="form-control"  id="showRisk-name">
                     </div>
                     <div class="form-group">
                         <label for="showRisk-content" class="control-label">风险内容:</label>
-                        <input type="text" class="form-control" readonly="readonly" id="showRisk-content">
+                        <input type="text" class="form-control"  id="showRisk-content">
                     </div>
                     <div class="form-group">
                         <label for="showRisk-possibility" class="control-label">可能性（高中低）:</label>
-                        <input type="text" class="form-control" readonly="readonly" id="showRisk-possibility">
+                        <input type="text" class="form-control"  id="showRisk-possibility">
                     </div>
                     <div class="form-group">
                         <label for="showRisk-level" class="control-label">影响程度（高中低）:</label>
-                        <input type="text" class="form-control" readonly="readonly" id="showRisk-level">
+                        <input type="text" class="form-control"  id="showRisk-level">
                     </div>
                     <div class="form-group">
                         <label for="showRisk-gate" class="control-label">触发器/阈值:</label>
-                        <input type="text" class="form-control" readonly="readonly" id="showRisk-gate">
+                        <input type="text" class="form-control"  id="showRisk-gate">
                     </div>
                     <div class="form-group">
                         <label for="showRisk-creator" class="control-label">提交者:</label>
@@ -197,6 +197,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 <button type="button" class="btn btn-primary" id="follow-btn">跟踪</button>
+                <button type="button" class="btn btn-primary" id="update-btn">修改</button>
             </div>
         </div>
     </div>

@@ -163,4 +163,40 @@ public class DepartBRiskImpl implements RiskService{
     }
 
 
+    public void updateRisk(int risk_id, String risk_name, String risk_content, String risk_gate, String risk_level,String risk_possibility){
+        String sql = "select * from risk where risk_id = "+ risk_id ;
+
+        try {
+
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()) {
+                int riskId = rs.getInt(1);
+                String riskName = rs.getString(2);
+                String riskContent = rs.getString(3);
+                String riskLevel = rs.getString(4);
+                String riskPossibility = rs.getString(5);
+                String riskGate = rs.getString(6);
+                String riskCreator = rs.getString(7);
+                String riskFollower = rs.getString(8);
+                String riskCreatedTime = rs.getString(9);
+
+                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime);
+
+                Statement stmt2 = conn.createStatement();
+                String sql_update = " UPDATE risk SET risk_name ='" + risk_name + "',risk_content ='"+risk_content +"',risk_gate ='"+risk_gate +"',risk_level='"+risk_level +"',risk_possibility ='"+risk_possibility +"'WHERE risk_id = " +risk_id ;
+
+                System.out.println(sql_update);
+                boolean rs_update = stmt2.execute(sql_update);
+
+            }
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+    }
+
+
+
 }

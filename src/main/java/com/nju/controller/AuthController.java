@@ -150,6 +150,18 @@ public class AuthController {
         return true;
     }
 
+    @RequestMapping(value = "/updateRisk", method = RequestMethod.POST)
+    @ResponseBody
+    public boolean updateRisk(@RequestParam int risk_id,@RequestParam String risk_name,@RequestParam String risk_content,@RequestParam String risk_gate,@RequestParam String risk_level,@RequestParam String risk_possibility){
+
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+
+        riskService.updateRisk(risk_id,risk_name,risk_content,risk_gate,risk_level,risk_possibility);
+        return true;
+    }
+
+
+
 
     private String getTime(){
         Date date = new Date();

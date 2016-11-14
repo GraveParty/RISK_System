@@ -15,7 +15,7 @@
 <div class="container">
     <section id="content">
         <form action="/login" method="post">
-            <h1>学生登录</h1>
+            <h1>登录</h1>
             <div>
                 <input type="text" name="username" placeholder="Username" required="required" id="username" />
             </div>
