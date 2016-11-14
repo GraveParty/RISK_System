@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>A学院选课</title>
+    <title>风险管理</title>
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <style>
         body { padding-top: 100px; }

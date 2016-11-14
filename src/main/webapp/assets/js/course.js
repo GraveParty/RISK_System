@@ -60,10 +60,26 @@ function loadDropModal() {
     $('#FollowAddModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget) // Button that triggered the modal
         var riskId = button.data('risk-id') // Extract info from data-* attributes
-        var riskCreator
+        var riskName = button.data('risk-name')
+        var riskContent = button.data('risk-content')
+        var riskPossibility = button.data('risk-possibility')
+        var riskLevel = button.data('risk-level')
+        var riskGate = button.data('risk-gate')
+        var riskCreator = button.data('risk-creator')
+        var riskFollower = button.data('risk-follower')
+
 
         var modal = $(this)
-        modal.find('.modal-title').html('确定退选 <span class="text-primary">' + courseName + '</span> 课程？')
+        modal.find('.modal-title').html('确定退选 <span class="text-primary">' + " " + '</span> 课程？')
+        modal.find('.modal-body input#showRisk-id').val(riskId)
+        modal.find('.modal-body input#showRisk-name').val(riskName)
+        modal.find('.modal-body input#showRisk-content').val(riskContent)
+        modal.find('.modal-body input#showRisk-possibility').val(riskPossibility)
+        modal.find('.modal-body input#showRisk-level').val(riskLevel)
+        modal.find('.modal-body input#showRisk-gate').val(riskGate)
+        modal.find('.modal-body input#showRisk-creator').val(riskCreator)
+        modal.find('.modal-body input#showRisk-follower').val(riskFollower)
+
 
         $('#follow-btn')[0].onclick = function () {
             $.ajax({
@@ -213,12 +229,14 @@ function loadChooseRiskModal(str){
     modal.find('.modal-title').html('跟踪 <span class="text-primary">' + data[0] + '</span> 风险')
     modal.find('.modal-body input#showRisk-id').val(data[0])
     modal.find('.modal-body input#showRisk-name').val(data[1])
-    modal.find('.modal-body input#showRisk-content').val(data[4])
+    modal.find('.modal-body input#showRisk-creator').val(data[2])
+
     modal.find('.modal-body input#showRisk-possibility').val(data[7])
     modal.find('.modal-body input#showRisk-level').val(data[6])
     modal.find('.modal-body input#showRisk-gate').val(data[8])
-    modal.find('.modal-body input#showRisk-creator').val(data[2])
+
     modal.find('.modal-body input#showRisk-follower').val(data[5])
+    modal.find('.modal-body input#showRisk-content').val(data[4])
 }
 
 function loadDeleteRiskModal(str){
