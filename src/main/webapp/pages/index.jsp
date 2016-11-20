@@ -10,6 +10,7 @@
 <head>
     <title>风险管理</title>
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="/assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <style>
         body { padding-top: 100px; }
         .user-icon {
@@ -35,7 +36,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/index">首页 <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="/index">风险条目 <span class="sr-only">(current)</span></a></li>
+                <li ><a href="/plan">风险计划 </a></li>
                 <%--<li><a href="/course">我的选课</a></li>--%>
                 <%--<li><a href="/students">所有学生</a></li>--%>
             </ul>
@@ -73,7 +75,7 @@
                         <th>风险名称</th>
                         <th>创建者</th>
                         <th>创建时间</th>
-                        <th>跟踪/修改</th>
+                        <th>查看</th>
                         <th>删除</th>
                     </tr>
                     </thead>
@@ -87,7 +89,76 @@
 
 </div>
 
-<%--退课模态框--%>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1 col-md-offset-2">
+            <div class="control-group">
+                <a class="btn btn-default"  onclick="findRec()"   >查找/识别</a>
+            </div>
+        </div>
+
+        <div class="col-md-1 ">
+            <div class="control-group">
+                <a class="btn btn-default" onclick="findChange()">查找/演变</a>
+            </div>
+        </div>
+
+        <div class="col-md-2 ">
+            <div class="control-group">
+                <label class="control-label">开始时间</label>
+                <div class="controls input-append date form_datetime" data-date="2016-11-01T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                    <input size="16" type="text" value="" readonly>
+                    <span class="add-on"><i class="icon-remove"></i></span>
+                    <span class="add-on"><i class="icon-th"></i></span>
+                </div>
+                <input type="hidden" id="dtp_input1" value="" /><br/>
+            </div>
+        </div>
+
+        <div class="col-md-2 ">
+            <div class="control-group">
+                <label class="control-label">结束时间</label>
+                <div class="controls input-append date form_datetime" data-date="2016-11-01T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                    <input size="16" type="text" value="" readonly>
+                    <span class="add-on"><i class="icon-remove"></i></span>
+                    <span class="add-on"><i class="icon-th"></i></span>
+                </div>
+                <input type="hidden" id="dtp_input2" value="" /><br/>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">查询结果</div>
+                <!-- Table -->
+                <table class="table table-striped" id="reserchTable">
+                    <thead>
+                    <tr>
+                        <th>风险计划编号</th>
+                        <th>风险计划名称</th>
+                        <th>演变问题次数</th>
+                        <th>被识别次数</th>
+                        <th>查看</th>
+                    </tr>
+                    </thead>
+                    <tbody id="riskreserch-list">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%--添加风险条目--%>
 <div class="modal fade" id="addRiskModal" tabindex="-1" role="dialog" aria-labelledby="dropCourseModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -153,7 +224,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="FollowAddModalLabel">跟踪风险</h4>
+                <h4 class="modal-title" id="FollowAddModalLabel">查看风险</h4>
             </div>
             <div class="modal-body">
                 <form>
@@ -189,6 +260,14 @@
                         <label for="showRisk-follower" class="control-label">跟踪者:</label>
                         <input type="text" class="form-control" readonly="readonly" id="showRisk-follower">
                     </div>
+                    <div class="form-group">
+                        <label for="showRisk-rec" class="control-label">识别次数:</label>
+                        <input type="text" class="form-control" readonly="readonly" id="showRisk-rec">
+                    </div>
+                    <div class="form-group">
+                        <label for="showRisk-change" class="control-label">演变问题次数:</label>
+                        <input type="text" class="form-control" readonly="readonly" id="showRisk-change">
+                    </div>
 
 
 
@@ -205,12 +284,52 @@
 <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/js/course.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/assets/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+    $('.form_date').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+    $('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse: 0
+    });
+</script>
+
+
+
 <script>
     //loadChooseModal();
+    loadCourses();
     deleteRisk();
     followRisk();
     loadAddModal();
-    loadCourses();
+    findRec();
+    findChange();
 </script>
 </body>
 </html>

@@ -59,9 +59,8 @@ public class RiskDao {
                 String riskFollower = rs.getString(8);
                 String riskCreatedTime = rs.getString(9);
 
-                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator,riskFollower,riskCreatedTime);
 
-                res.add(r);
+
             }
             rs.close();
             return res;
@@ -119,9 +118,8 @@ public class RiskDao {
             String riskFollower = rs.getString(8);
             String riskCreatedTime = rs.getString(9);
 
-            Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator,riskFollower,riskCreatedTime);
             rs.close();
-            return r;
+            return null;
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

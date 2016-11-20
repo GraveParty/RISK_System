@@ -3,6 +3,7 @@ package com.nju.controller;
 import com.nju.data.DepartBRiskImpl;
 import com.nju.model.Course;
 import com.nju.model.Risk;
+import com.nju.model.RiskPlan;
 import com.nju.model.Student;
 import com.nju.service.CourseService;
 import com.nju.service.StudentService;
@@ -118,9 +119,22 @@ public class AuthController {
         return "/course";
     }
 
+    @RequestMapping(value = "/plan", method = RequestMethod.GET)
+    public String plan(){
+        return "/plan";
+    }
+
     @RequestMapping(value = "/students", method = RequestMethod.GET)
     public String students(){
         return "/students";
+    }
+
+    @RequestMapping(value = "/getAllRiskPlan", method = RequestMethod.POST)
+    @ResponseBody
+    public List<RiskPlan> getAllRiskPlan(){
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+        System.out.println("  planget");
+        return riskService.getAllRiskPlan();
     }
 
     @RequestMapping(value = "/getAllRisks", method = RequestMethod.POST)
@@ -130,15 +144,28 @@ public class AuthController {
         return riskService.getAllRisks();
     }
 
+
     @RequestMapping(value = "/addRisk", method = RequestMethod.POST)
     @ResponseBody
     public boolean addRisk(@RequestParam String riskId,@RequestParam String riskName,@RequestParam String riskContent,@RequestParam String riskPossibility,@RequestParam String riskLevel,@RequestParam String riskGate, HttpSession session){
 
-        Risk risk = new Risk(0,riskName,riskContent,riskLevel, riskPossibility, riskGate, session.getAttribute("id").toString(), "",  getTime()) ;
+        Risk risk = new Risk(0,riskName,riskContent,riskLevel, riskPossibility, riskGate, session.getAttribute("id").toString(), "",  getTime(),0,0) ;
         DepartBRiskImpl riskService=new DepartBRiskImpl();
         riskService.addRisk(risk);
         return true;
     }
+
+    @RequestMapping(value = "/addRiskPlan", method = RequestMethod.POST)
+    @ResponseBody
+    public boolean addRiskPlan(@RequestParam String riskPlanId,@RequestParam String riskPlanName,@RequestParam String riskPlanContent, HttpSession session){
+
+        RiskPlan riskplan = new RiskPlan(0,riskPlanName, session.getAttribute("id").toString(), riskPlanContent,   getTime()) ;
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+        riskService.addRiskPlan(riskplan);
+        return true;
+    }
+
+
 
     @RequestMapping(value = "/followRisk", method = RequestMethod.POST)
     @ResponseBody
@@ -149,6 +176,31 @@ public class AuthController {
         riskService.followRisk(risk_id,session.getAttribute("id").toString());
         return true;
     }
+
+
+    @RequestMapping(value = "/recRisk", method = RequestMethod.POST)
+    @ResponseBody
+    public boolean recRisk(@RequestParam int risk_id){
+
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+
+        riskService.RiskRec(risk_id);
+        riskService.addRiskRec(risk_id,getTime());
+        return true;
+    }
+
+    @RequestMapping(value = "/changeRisk", method = RequestMethod.POST)
+    @ResponseBody
+    public boolean changeRisk(@RequestParam int risk_id){
+
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+
+        riskService.RiskChange(risk_id);
+        riskService.addRiskChange(risk_id,getTime());
+
+        return true;
+    }
+
 
     @RequestMapping(value = "/updateRisk", method = RequestMethod.POST)
     @ResponseBody
@@ -176,6 +228,14 @@ public class AuthController {
     public Risk getRisk(int risk_id){
         DepartBRiskImpl riskService=new DepartBRiskImpl();
         return riskService.getRisk(risk_id);
+    }
+
+
+    @RequestMapping(value = "/getRisksForPlan", method = RequestMethod.POST)
+    @ResponseBody
+    public List<Risk> getRisksForPlan(int PlanId){
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+        return riskService.getRiskForPlan(PlanId);
     }
 
     @RequestMapping(value = "/deleteRisk", method = RequestMethod.POST)

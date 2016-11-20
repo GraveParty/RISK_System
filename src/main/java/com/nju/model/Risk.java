@@ -13,8 +13,10 @@ public class Risk {
     private String riskCreator;
     private String riskFollower;
     private String riskCreatedTime;
+    private int riskRec;
+    private int riskChange;
 
-    public Risk(int riskId, String riskName, String riskContent, String riskLevel, String riskPossibility, String riskGate, String riskCreator, String riskFollower, String riskCreatedTime) {
+    public Risk(int riskId, String riskName, String riskContent, String riskLevel, String riskPossibility, String riskGate, String riskCreator, String riskFollower, String riskCreatedTime,int riskRec,int riskChange) {
         this.riskId = riskId;
         this.riskName = riskName;
         this.riskContent = riskContent;
@@ -24,8 +26,25 @@ public class Risk {
         this.riskCreator = riskCreator;
         this.riskFollower = riskFollower;
         this.riskCreatedTime = riskCreatedTime;
+        this.riskRec = riskRec;
+        this.riskChange = riskChange;
     }
 
+    public int getRiskRec() {
+        return riskRec;
+    }
+
+    public void setRiskRec(int riskRec) {
+        this.riskRec = riskRec;
+    }
+
+    public int getRiskChange() {
+        return riskChange;
+    }
+
+    public void setRiskChange(int riskChange) {
+        this.riskChange = riskChange;
+    }
 
     public int getRiskId() {
         return riskId;

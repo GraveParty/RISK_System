@@ -1,8 +1,8 @@
 package com.nju.data;
 
-import com.nju.model.Course;
-import com.nju.model.Risk;
 
+import com.nju.model.Risk;
+import com.nju.model.RiskPlan;
 import java.rmi.RemoteException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -55,8 +55,10 @@ public class DepartBRiskImpl implements RiskService{
                 String riskCreator = rs.getString(7);
                 String riskFollower = rs.getString(8);
                 String riskCreatedTime = rs.getString(9);
+                int riskRec = rs.getInt(10);
+                int riskChange = rs.getInt(11);
 
-                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator,riskFollower,riskCreatedTime);
+                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime,riskRec,riskChange);
 
                 res.add(r);
             }
@@ -69,15 +71,91 @@ public class DepartBRiskImpl implements RiskService{
     }
 
 
+    public List<RiskPlan> getAllRiskPlan() {
+        List<RiskPlan> res = new ArrayList<RiskPlan>();
+
+        String sql = "select * from riskplan ";
+        try {
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()){
+
+
+                int riskPlanId = rs.getInt(1);
+                String riskPlanName = rs.getString(2);
+                String riskPlanCreator = rs.getString(3);
+                String riskPlanContent = rs.getString(4);
+                String riskPlanCreatedTime = rs.getString(5);
+                RiskPlan r = new RiskPlan(riskPlanId,riskPlanName,riskPlanCreator,riskPlanContent,riskPlanCreatedTime);
+                res.add(r);
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return res;
+
+    }
+
+
+
     public void addRisk(Risk risk) {
 
         //res.addAll(req.getMyOtherCourses(studentId));
         String sql = "insert into risk values (0,'"+risk.getRiskName()+"','"+risk.getRiskContent()+"','"+risk.getRiskLevel()+"','"+risk.getRiskPossibility()+"','" +
-                risk.getRiskGate()+"','"+risk.getRiskCreator()+"','"+risk.getRiskFollower()+"','"+risk.getRiskCreatedTime()+"')";
+                risk.getRiskGate()+"','"+risk.getRiskCreator()+"','"+risk.getRiskFollower()+"','"+risk.getRiskCreatedTime()+"',0,0)";
 
         try {
             boolean rs = stmt.execute(sql);
-            
+
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public void addRiskPlan(RiskPlan riskplan) {
+
+        //res.addAll(req.getMyOtherCourses(studentId));
+        String sql = "insert into riskplan values (0,'"+riskplan.getRiskPlanName()+"','"+ riskplan.getRiskPlanCreator()+"','"+riskplan.getRiskPlanContent()+"','"+riskplan.getRiskPlanCreatedTime()+"')";
+        System.out.println(sql);
+        try {
+            boolean rs = stmt.execute(sql);
+
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void addRiskRec(int risk_id,String createdtime) {
+
+
+        String sql = "insert into riskwarning values (0,'"+risk_id+"','"+ createdtime+"')";
+        System.out.println(sql);
+        try {
+            boolean rs = stmt.execute(sql);
+
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public void addRiskChange(int risk_id,String createdtime) {
+
+        //res.addAll(req.getMyOtherCourses(studentId));
+        String sql = "insert into riskproblem values (0,'"+risk_id+"','"+ createdtime+"')";
+
+        try {
+            boolean rs = stmt.execute(sql);
+
 
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -103,11 +181,47 @@ public class DepartBRiskImpl implements RiskService{
                 String riskCreator = rs.getString(7);
                 String riskFollower = rs.getString(8);
                 String riskCreatedTime = rs.getString(9);
+                int riskRec = rs.getInt(10);
+                int riskChange = rs.getInt(11);
 
-                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime);
+                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime,riskRec,riskChange);
                 return r;
             }
             rs.close();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+
+    public List<Risk> getRiskForPlan(int riskplan_id) {
+        String sql = "select * from risk where risk_id in (select risk_id from risktoplan where riskplan_id = "+ riskplan_id +")" ;
+        try {
+            ResultSet rs = stmt.executeQuery(sql);
+            List<Risk> result= new ArrayList<Risk>();
+            while(rs.next()) {
+                int riskId = rs.getInt(1);
+                String riskName = rs.getString(2);
+                String riskContent = rs.getString(3);
+                String riskLevel = rs.getString(4);
+                String riskPossibility = rs.getString(5);
+                String riskGate = rs.getString(6);
+                String riskCreator = rs.getString(7);
+                String riskFollower = rs.getString(8);
+                String riskCreatedTime = rs.getString(9);
+                int riskRec = rs.getInt(10);
+                int riskChange = rs.getInt(11);
+
+                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime,riskRec,riskChange);
+                result.add(r);
+            }
+            rs.close();
+            System.out.println(result.size());
+            return result;
+
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -147,8 +261,10 @@ public class DepartBRiskImpl implements RiskService{
                 String riskCreator = rs.getString(7);
                 String riskFollower = rs.getString(8);
                 String riskCreatedTime = rs.getString(9);
+                int riskRec = rs.getInt(10);
+                int riskChange = rs.getInt(11);
 
-                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime);
+                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime,riskRec,riskChange);
                 r.setRiskFollower(r.getRiskFollower() +  follower_id+";") ;
                 Statement stmt2 = conn.createStatement();
                 String sql_update = " UPDATE risk SET risk_follower = '" + r.getRiskFollower() + "' WHERE risk_id = " +risk_id ;
@@ -164,6 +280,58 @@ public class DepartBRiskImpl implements RiskService{
         }
 
     }
+
+
+    public void RiskRec(int risk_id){
+        String sql = "select * from risk where risk_id = "+ risk_id ;
+
+        try {
+
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()) {
+                int riskRec = rs.getInt(10);
+                Statement stmt2 = conn.createStatement();
+                String sql_update = " UPDATE risk SET risk_rec = '" + (riskRec+1) + "' WHERE risk_id = " +risk_id ;
+                System.out.println(sql_update);
+                stmt2.execute(sql_update);
+
+            }
+            rs.close();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+    }
+
+    public void RiskChange(int risk_id){
+        String sql = "select * from risk where risk_id = "+ risk_id ;
+
+        try {
+
+            ResultSet rs = stmt.executeQuery(sql);
+            while(rs.next()) {
+                int riskChange = rs.getInt(11);
+                Statement stmt2 = conn.createStatement();
+                String sql_update = " UPDATE risk SET risk_change = '" + (riskChange+1) + "' WHERE risk_id = " +risk_id ;
+                System.out.println(sql_update);
+                boolean rs_update = stmt2.execute(sql_update);
+
+            }
+            rs.close();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+    }
+
+
+
+
+
 
 
     public void updateRisk(int risk_id, String risk_name, String risk_content, String risk_gate, String risk_level,String risk_possibility){
@@ -182,8 +350,6 @@ public class DepartBRiskImpl implements RiskService{
                 String riskCreator = rs.getString(7);
                 String riskFollower = rs.getString(8);
                 String riskCreatedTime = rs.getString(9);
-
-                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime);
 
                 Statement stmt2 = conn.createStatement();
                 String sql_update = " UPDATE risk SET risk_name ='" + risk_name + "',risk_content ='"+risk_content +"',risk_gate ='"+risk_gate +"',risk_level='"+risk_level +"',risk_possibility ='"+risk_possibility +"'WHERE risk_id = " +risk_id ;
