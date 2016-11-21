@@ -137,12 +137,13 @@
 </div>
 
 
+<%--选课模态框--%>
 <div class="modal fade" id="FollowAddModal" tabindex="-1" role="dialog" aria-labelledby="chooseCourseModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="FollowAddModalLabel">跟踪风险</h4>
+                <h4 class="modal-title" id="FollowAddModalLabel">查看风险</h4>
             </div>
             <div class="modal-body">
                 <form>
@@ -178,14 +179,7 @@
                         <label for="showRisk-follower" class="control-label">跟踪者:</label>
                         <input type="text" class="form-control" readonly="readonly" id="showRisk-follower">
                     </div>
-                    <div class="form-group">
-                        <label for="showRisk-rec" class="control-label">识别次数:</label>
-                        <input type="text" class="form-control" readonly="readonly" id="showRisk-rec">
-                    </div>
-                    <div class="form-group">
-                        <label for="showRisk-change" class="control-label">演变问题次数:</label>
-                        <input type="text" class="form-control" readonly="readonly" id="showRisk-change">
-                    </div>
+
 
 
 
@@ -201,6 +195,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 
 
@@ -316,7 +313,7 @@
     loadPlan();
     loadAddPlanModal();
     loadRiskForPlan();
-
+    deleteRisk();
 
 </script>
 </body>

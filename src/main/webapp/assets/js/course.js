@@ -106,14 +106,6 @@ function loadDropModal() {
  * 初始化添加风险态框
  */
 function loadAddModal() {
-    $('#addRiskModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget) // Button that triggered the modal
-
-
-        var modal = $(this)
-        modal.find('.modal-title').html('添加风险')
-
-        $('#comfirm-add-btn')[0].onclick = function () {
             var riskId = 0
             var riskName= $("#risk-name").val()
             var riskContent= $("#risk-content").val()
@@ -140,8 +132,8 @@ function loadAddModal() {
                     alert("添加失败");
                 }
             })
-        }
-    })
+
+
 }
 
 
@@ -208,179 +200,125 @@ function AddRiskToPlanModal() {
 
 
 function showchartrec() {
-    var ctx = $("#myRecChart").get(0).getContext("2d");
-    alert("aa");
-    var data = {
-        labels : ["January","February","March","April","May","June","July"],
-        datasets : [
-            {
-                fillColor : "rgba(220,220,220,0.5)",
-                strokeColor : "rgba(220,220,220,1)",
-                data : [65,59,90,81,56,55,40]
-            },
-            {
-                fillColor : "rgba(151,187,205,0.5)",
-                strokeColor : "rgba(151,187,205,1)",
-                data : [28,48,40,19,96,27,100]
+    var startTime=$("#startTime").val();
+    var endTime=$("#endTime").val();
+
+
+    $.ajax({
+        url:"/getRecByTime",
+        type:"post",
+        data:{
+            startTime:startTime,
+            endTime:endTime
+        },
+
+        success:function (data) {
+            console.log(data);
+
+            var arr = new Array();
+            var rec = new Array();
+            for (var i = 0; i < data.length; i++){
+                arr[i]=data[i]['riskId'];
+                rec[i]=data[i]['riskRec'];
             }
-        ]
-    }
+
+            var myChart = echarts.init(document.getElementById('main'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: '各风险被识别次数'
+                },
+                tooltip: {},
+                legend: {
+                    data:['次数']
+                },
+                xAxis: {
+                    data: arr
+                },
+                yAxis: {},
+                series: [{
+                    name: '次数',
+                    type: 'bar',
+                    data: rec
+                }]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
 
 
-    alert("aaaaaa");
 
-    Bar.defaults = {
+        }
 
-        //Boolean - If we show the scale above the chart data
-        scaleOverlay : false,
-
-        //Boolean - If we want to override with a hard coded scale
-        scaleOverride : false,
-
-        //** Required if scaleOverride is true **
-        //Number - The number of steps in a hard coded scale
-        scaleSteps : null,
-        //Number - The value jump in the hard coded scale
-        scaleStepWidth : null,
-        //Number - The scale starting value
-        scaleStartValue : null,
-
-        //String - Colour of the scale line
-        scaleLineColor : "rgba(0,0,0,.1)",
-
-        //Number - Pixel width of the scale line
-        scaleLineWidth : 1,
-
-        //Boolean - Whether to show labels on the scale
-        scaleShowLabels : false,
-
-        //Interpolated JS string - can access value
-        scaleLabel : "<%=value%>",
-
-        //String - Scale label font declaration for the scale label
-        scaleFontFamily : "'Arial'",
-
-        //Number - Scale label font size in pixels
-        scaleFontSize : 12,
-
-        //String - Scale label font weight style
-        scaleFontStyle : "normal",
-
-        //String - Scale label font colour
-        scaleFontColor : "#666",
-
-        ///Boolean - Whether grid lines are shown across the chart
-        scaleShowGridLines : true,
-
-        //String - Colour of the grid lines
-        scaleGridLineColor : "rgba(0,0,0,.05)",
-
-        //Number - Width of the grid lines
-        scaleGridLineWidth : 1,
-
-        //Boolean - If there is a stroke on each bar
-        barShowStroke : true,
-
-        //Number - Pixel width of the bar stroke
-        barStrokeWidth : 2,
-
-        //Number - Spacing between each of the X value sets
-        barValueSpacing : 5,
-
-        //Number - Spacing between data sets within X values
-        barDatasetSpacing : 1,
-
-        //Boolean - Whether to animate the chart
-        animation : true,
-
-        //Number - Number of animation steps
-        animationSteps : 60,
-
-        //String - Animation easing effect
-        animationEasing : "easeOutQuart",
-
-        //Function - Fires when the animation is complete
-        onAnimationComplete : null
-
-    }
+    });
 
 
-    var myNewChart =new Chart(ctx).Bar(data,options);
 
-    Bar.defaults = {
 
-        //Boolean - If we show the scale above the chart data
-        scaleOverlay : false,
 
-        //Boolean - If we want to override with a hard coded scale
-        scaleOverride : false,
+}
 
-        //** Required if scaleOverride is true **
-        //Number - The number of steps in a hard coded scale
-        scaleSteps : null,
-        //Number - The value jump in the hard coded scale
-        scaleStepWidth : null,
-        //Number - The scale starting value
-        scaleStartValue : null,
 
-        //String - Colour of the scale line
-        scaleLineColor : "rgba(0,0,0,.1)",
+function showchartchange() {
+    $('#showchartchangeModal').on('show.bs.modal', function (event) {
+        $('#ChangeRiskModal').modal('hide');
+    })
 
-        //Number - Pixel width of the scale line
-        scaleLineWidth : 1,
+    var startTime=$("#startTime").val();
+    var endTime=$("#endTime").val();
 
-        //Boolean - Whether to show labels on the scale
-        scaleShowLabels : false,
 
-        //Interpolated JS string - can access value
-        scaleLabel : "<%=value%>",
+    $.ajax({
+        url:"/getChangeByTime",
+        type:"post",
+        data:{
+            startTime:startTime,
+            endTime:endTime
+        },
 
-        //String - Scale label font declaration for the scale label
-        scaleFontFamily : "'Arial'",
+        success:function (data) {
+            console.log(data);
 
-        //Number - Scale label font size in pixels
-        scaleFontSize : 12,
+            var arr = new Array();
+            var change = new Array();
+            for (var i = 0; i < data.length; i++){
+                arr[i]=data[i]['riskId'];
+                change[i]=data[i]['riskChange'];
+            }
 
-        //String - Scale label font weight style
-        scaleFontStyle : "normal",
+            var myChart = echarts.init(document.getElementById('main2'));
 
-        //String - Scale label font colour
-        scaleFontColor : "#666",
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: '各风险演变成问题次数'
+                },
+                tooltip: {},
+                legend: {
+                    data:['次数']
+                },
+                xAxis: {
+                    data: arr
+                },
+                yAxis: {},
+                series: [{
+                    name: '次数',
+                    type: 'bar',
+                    data: change
+                }]
+            };
 
-        ///Boolean - Whether grid lines are shown across the chart
-        scaleShowGridLines : true,
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        }
 
-        //String - Colour of the grid lines
-        scaleGridLineColor : "rgba(0,0,0,.05)",
+    });
 
-        //Number - Width of the grid lines
-        scaleGridLineWidth : 1,
 
-        //Boolean - If there is a stroke on each bar
-        barShowStroke : true,
 
-        //Number - Pixel width of the bar stroke
-        barStrokeWidth : 2,
 
-        //Number - Spacing between each of the X value sets
-        barValueSpacing : 5,
 
-        //Number - Spacing between data sets within X values
-        barDatasetSpacing : 1,
-
-        //Boolean - Whether to animate the chart
-        animation : true,
-
-        //Number - Number of animation steps
-        animationSteps : 60,
-
-        //String - Animation easing effect
-        animationEasing : "easeOutQuart",
-
-        //Function - Fires when the animation is complete
-        onAnimationComplete : null
-
-    }
 }
 
 
@@ -417,11 +355,11 @@ function findRec(){
                 var content = '<tr>' +
                     '<th scope="row">' + riskId + '</th>' +
                     '<td>' + riskName + '</td>' +
-                    '<td>' + riskChange + '</td>' +
-                    '<td>' + riskRec + '</td>' ;
+                    '<td>' + riskRec + '</td>' +
+                    '<td>' + riskChange + '</td>' ;
 
-                content += '<td><a onclick="loadChooseRiskModal(this.id)" href="#" data-toggle="modal" data-target="#FollowAddModal" id=' + riskId + ':' + riskName + ':' + riskCreator + ':' + riskCreatedTime + ':' + riskContent + ':' + riskFollower + ':' + riskLevel + ':' + riskPossibility + ':' + riskGate +':' + riskRec +':' + riskChange +'>查看</a></td>';
-                content += '<td><a onclick="loadDeleteRiskModal(this.id)" href="#" data-toggle="modal" data-target="#deleteRiskModal" id=' + riskId +'>删除</a></td>';
+                content += '<td><a onclick="loadChooseRiskModal(this.id)" href="#" data-toggle="modal" data-target="#FollowAddModal" id=' + riskId + ':' + riskName + ':' + riskCreator + ':' + riskCreatedTime + ':' + riskContent + ':' + riskFollower + ':' + riskLevel + ':' + riskPossibility + ':' + riskGate +':' + riskRec +':' + riskChange +':' + riskChange +':' + riskChange +'>查看</a></td>';
+                content += '<td><a onclick="loadDeleteRiskModal(this.id)" href="#" data-toggle="modal" data-target="#deleteRiskModal" id=' + riskId +':' + riskId +':' + riskId +'>删除</a></td>';
 
                 content += '<td><label><input type="checkbox" id=' + (i+1000) +' , name=' + riskId +'></label></td>';
 
@@ -469,12 +407,12 @@ function findChange(){
                 var content = '<tr>' +
                     '<th scope="row">' + riskId + '</th>' +
                     '<td>' + riskName + '</td>' +
-                    '<td>' + riskChange + '</td>' +
-                    '<td>' + riskRec + '</td>' ;
+                    '<td>' + riskRec + '</td>' +
+                    '<td>' + riskChange + '</td>' ;
 
                 content += '<td><a onclick="loadChooseRiskModal(this.id)" href="#" data-toggle="modal" data-target="#FollowAddModal" id=' + riskId + ':' + riskName + ':' + riskCreator + ':' + riskCreatedTime + ':' + riskContent + ':' + riskFollower + ':' + riskLevel + ':' + riskPossibility + ':' + riskGate +':' + riskRec +':' + riskChange +':' + riskChange +'>查看</a></td>';
 
-                content += '<td><a onclick="loadDeleteRiskModal(this.id)" href="#" data-toggle="modal" data-target="#deleteRiskModal" id=' + riskId +':' + riskChange +'>删除</a></td>';
+                content += '<td><a onclick="loadDeleteRiskModal(this.id)" href="#" data-toggle="modal" data-target="#deleteRiskModal" id=' + riskId +':' + riskId +':' + riskId +':' + riskId +'>删除</a></td>';
 
                 content += '<td><label><input type="checkbox" id=' + (i+5000) +' , name=' + riskId +'></label></td>';
 
@@ -737,7 +675,7 @@ function comfirmAddToPlan(){
 
         },
         success:function() {
-            alert("添加成功");
+            alert("添加成功～");
             window.location.reload();
         },
         error:function () {
@@ -833,7 +771,7 @@ function loadChoosePlanModal(str){
                     '<td>' + riskCreatedTime + '</td>' ;
 
                 content += '<td><a onclick="loadChooseRiskModal(this.id)" href="#" data-toggle="modal" data-target="#FollowAddModal" id=' + riskId + ':' + riskName + ':' + riskCreator + ':' + riskCreatedTime + ':' + riskContent + ':' + riskFollower + ':' + riskLevel + ':' + riskPossibility + ':' + riskGate +':' + riskRec +':' + riskChange +'>查看</a></td>';
-                content += '<td><a onclick="loadDeleteRiskModal(this.id)" href="#" data-toggle="modal" data-target="#deleteRiskModal" id=' + riskId +'>删除</a></td>';
+                content += '<td><a onclick="loadDeleteRiskModal(this.id)" href="#" data-toggle="modal" data-target="#deleteRiskModal" id=' + riskId +':' + riskId +'>删除</a></td>';
 
 
                 content += '</tr>';
@@ -869,16 +807,16 @@ function loadChooseRiskModal(str){
     modal.find('.modal-body input#showRisk-gate').val(data[8])
 
     modal.find('.modal-body input#showRisk-follower').val(data[5])
-    modal.find('.modal-body input#showRisk-content').val(data[4])
+    modal.find('.modal-body input#showRisk-content').val(data[4]) 
     modal.find('.modal-body input#showRisk-rec').val(data[9])
     modal.find('.modal-body input#showRisk-change').val(data[10])
 
     $('#FollowAddModal').on('hidden.bs.modal', function () {
         $('#ShowPlanModal').modal('show')
-        if(data.length>11){
+        if(data.length==12){
             $('#ChangeRiskModal').modal('show')
         }
-        else{
+        else if(data.length==13){
             $('#RecRiskModal').modal('show')
         }
 
@@ -886,13 +824,33 @@ function loadChooseRiskModal(str){
 }
 
 function loadDeleteRiskModal(str){
-    $('#deleteRiskSpan').text(str)
+    var strlist=str.split(":");
+    if (strlist.length==2){
+        $('#deleteRiskSpan').text(strlist[1]);
+        $('#ShowPlanModal').modal('hide');
+    }
+    else if (strlist.length==3){
+        $('#deleteRiskSpan').text(strlist[1]);
+        $('#RecRiskModal').modal('hide');
+    }
+
+    else if (strlist.length==4){
+        $('#deleteRiskSpan').text(strlist[1]);
+        $('#ChangeRiskModal').modal('hide');
+    }
+
+
+
+    else{
+        $('#deleteRiskSpan').text(str);
+    }
+
 }
 
 function deleteRisk(){
     $('#comfirm-delete-btn')[0].onclick = function () {
         var riskId = $('#deleteRiskSpan').text()
-
+        $('#ShowPlanModal').modal('show');
         $.ajax({
             url:"/deleteRisk",
             type:"post",
@@ -943,10 +901,10 @@ function followRisk() {
             },
             success:function (data) {
                 if(data){
-                    alert("识别成功");
+                    alert("记录成功");
                     window.location.reload();
                 }else {
-                    alert("识别失败");
+                    alert("记录失败");
                 }
             },
             error:function () {

@@ -238,9 +238,9 @@ public class DepartBRiskImpl implements RiskService{
             @Override
             public int compare(Object o1, Object o2) {
                 if(((Risk)o1).getRiskRec()>((Risk)o2).getRiskRec())
-                    return 1;
-                else{
                     return -1;
+                else{
+                    return 1;
                 }
             }
         });
@@ -344,7 +344,6 @@ public class DepartBRiskImpl implements RiskService{
 
         for(int i=0;i<realList.size();i++){
             for(int j=0;j<changeList.size();j++){
-                System.out.println(realList.get(i).getRiskId()+"    "+changeList.get(j).getRiskId());
                 if(realList.get(i).getRiskId()==changeList.get(j).getRiskId()){
                     realList.get(i).setRiskChange( realList.get(i).getRiskChange()+1   );
                 }
@@ -365,16 +364,16 @@ public class DepartBRiskImpl implements RiskService{
             @Override
             public int compare(Object o1, Object o2) {
                 if(((Risk)o1).getRiskChange()>((Risk)o2).getRiskChange())
-                    return 1;
-                else{
                     return -1;
+                else{
+                    return 1;
                 }
             }
         });
 
 
         for(int i=0;i<realList.size();i++){
-            System.out.println(realList.get(i).getRiskId()+" "+realList.get(i).getRiskContent());
+            System.out.println(realList.get(i).getRiskId()+" "+realList.get(i).getRiskChange());
         }
 
         return realList;

@@ -157,6 +157,7 @@ public class AuthController {
     @ResponseBody
     public List<Risk> getChangeByTime(String startTime,String endTime){
         DepartBRiskImpl riskService=new DepartBRiskImpl();
+
         return riskService.getChangeByTime(startTime,endTime);
     }
 

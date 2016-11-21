@@ -11,6 +11,7 @@
     <title>风险管理</title>
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="/assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <script src="/assets/js/echarts.min.js"></script>
     <style>
         body { padding-top: 100px; }
         .user-icon {
@@ -135,7 +136,6 @@
 
 
 
-
 <%--添加风险条目--%>
 <div class="modal fade" id="addRiskModal" tabindex="-1" role="dialog" aria-labelledby="dropCourseModalLabel">
     <div class="modal-dialog" role="document">
@@ -170,7 +170,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary" id="comfirm-add-btn">确认</button>
+                <button type="button" class="btn btn-primary" onclick="loadAddModal()" id="comfirm-add-btn">确认</button>
             </div>
         </div>
     </div>
@@ -254,6 +254,8 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 <button type="button" class="btn btn-primary" id="follow-btn">跟踪</button>
+                <button type="button" class="btn btn-primary" id="rec-btn">识别</button>
+                <button type="button" class="btn btn-primary" id="change-btn">演变</button>
                 <button type="button" class="btn btn-primary" id="update-btn">修改</button>
             </div>
         </div>
@@ -308,10 +310,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="showchartrecModalLabel1">各风险演变为问题次数饼图</h4>
+                <h4 class="modal-title" id="showchartrecModalLabel1">各风险被识别次数饼图</h4>
             </div>
             <div class="modal-body"  id="showchartrec" >
-                <canvas id="myRecChart" width="400" height="400"></canvas>
+                <div id="main" style="width: 600px;height:400px;"></div>
+
 
             </div>
             <div class="modal-footer">
@@ -321,6 +324,25 @@
     </div>
 </div>
 
+
+<div class="modal fade" id="showchartchangeModal" tabindex="-1" role="dialog" aria-labelledby="ChangeRiskModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="showchartchangeModalLabel1">各风险演变为问题次数饼图</h4>
+            </div>
+            <div class="modal-body"  id="showchartchange" >
+                <div id="main2" style="width: 600px;height:400px;"></div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="modal fade" id="ChangeRiskModal" tabindex="-1" role="dialog" aria-labelledby="ChangeRiskModalLabel">
     <div class="modal-dialog" role="document">
@@ -350,6 +372,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="showchartchange-btn" onclick="showchartchange()"  href="#" data-toggle="modal" data-target="#showchartchangeModal">图表展示</button>
                 <button type="button" class="btn btn-primary" id="addtoplan-btn2" onclick="addToPlan()"  href="#" data-toggle="modal" data-target="#SelectPlanModal">导入计划</button>
 
             </div>
@@ -399,6 +422,7 @@
 <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/js/course.js"></script>
 <script type="text/javascript" src="/assets/js/echarts.js"></script>
+<script src="/assets/js/echarts.min.js"></script>
 <script type="text/javascript" src="/assets/js/chart.js"></script>
 <script type="text/javascript" src="/assets/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 <script type="text/javascript" src="/assets/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
@@ -444,17 +468,15 @@
 
 <script>
     //loadChooseModal();
+    //loadDropModal();
     loadCourses();
-    deleteRisk();
+//    deleteRisk();
     followRisk();
-    loadAddModal();
-    findRec();
-    findChange();
-    addToPlan()
+//    findRec();
+//    findChange();
+//    addToPlan();
     AddRiskToPlanModal();
-    comfirmAddToPlan();
-    showchartrec();
-
+    //showchartrec();
 </script>
 </body>
 </html>
