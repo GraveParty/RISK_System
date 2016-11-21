@@ -5,8 +5,7 @@ import com.nju.model.Risk;
 import com.nju.model.RiskPlan;
 import java.rmi.RemoteException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Zongyi on 2016/11/10.
@@ -148,6 +147,40 @@ public class DepartBRiskImpl implements RiskService{
 
     }
 
+
+
+
+    public void addRiskToPlan(String risk_idlist,String plan_idlist) {
+        String[] risklist=risk_idlist.split(";");
+        String[] planlist=plan_idlist.split(";");
+
+        for(int i=0;i<risklist.length;i++){
+            for(int j=0;j<planlist.length;j++){
+
+                String sql = "insert into risktoplan values (0,'"+risklist[i]+"','"+ planlist[j]+"')";
+                System.out.println(sql);
+                try {
+                    boolean rs = stmt.execute(sql);
+                    stmt=conn.createStatement();
+                } catch (SQLException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+
+
+            }
+        }
+
+
+
+
+
+
+    }
+
+
+
+
     public void addRiskChange(int risk_id,String createdtime) {
 
         //res.addAll(req.getMyOtherCourses(studentId));
@@ -193,6 +226,158 @@ public class DepartBRiskImpl implements RiskService{
             e.printStackTrace();
         }
         return null;
+    }
+
+    public List<Risk> getRecByTime(String startTime,String endTime){
+        startTime=startTime.split(" ")[0]+"_"+startTime.split(" ")[1];
+        endTime=endTime.split(" ")[0]+"_"+endTime.split(" ")[1];
+
+        List<Risk>realList=getRecChange(startTime,endTime);
+
+        Collections.sort(realList, new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                if(((Risk)o1).getRiskRec()>((Risk)o2).getRiskRec())
+                    return 1;
+                else{
+                    return -1;
+                }
+            }
+        });
+
+        return realList;
+
+
+    }
+
+    public List<Risk> getRecChange(String startTime,String endTime){
+        String sql = "select * from riskwarning where createdtime >= '"+ startTime+"' and createdtime <= '"+ endTime+"'" ;
+        List<Risk> recList = new ArrayList<Risk>();
+        try {
+
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while(rs.next()) {
+                int riskId = rs.getInt(2);
+                String riskName = "";
+                String riskContent = "";
+                String riskLevel = "";
+                String riskPossibility ="";
+                String riskGate = "";
+                String riskCreator = "";
+                String riskFollower = "";
+                String riskCreatedTime = "";
+                int riskRec = 0;
+                int riskChange = 0;
+                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime,riskRec,riskChange);
+                recList.add(r);
+            }
+            rs.close();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+        String sql3 = "select * from riskproblem where createdtime >= '"+ startTime+"' and createdtime <= '"+ endTime+"'" ;
+        List<Risk> changeList = new ArrayList<Risk>();
+        try {
+
+            ResultSet rs = stmt.executeQuery(sql3);
+
+            while(rs.next()) {
+                int riskId = rs.getInt(2);
+                String riskName = "";
+                String riskContent = "";
+                String riskLevel = "";
+                String riskPossibility ="";
+                String riskGate = "";
+                String riskCreator = "";
+                String riskFollower = "";
+                String riskCreatedTime = "";
+                int riskRec = 0;
+                int riskChange = 0;
+                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime,riskRec,riskChange);
+                changeList.add(r);
+            }
+            rs.close();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        List<Risk> realList = new ArrayList<Risk>();
+        String sql2 = "select * from risk" ;
+        try {
+            stmt=conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql2);
+
+            while(rs.next()) {
+                int riskId = rs.getInt(1);
+                String riskName = rs.getString(2);
+                String riskContent = rs.getString(3);
+                String riskLevel = rs.getString(4);
+                String riskPossibility = rs.getString(5);
+                String riskGate = rs.getString(6);
+                String riskCreator = rs.getString(7);
+                String riskFollower = rs.getString(8);
+                String riskCreatedTime = rs.getString(9);
+                int riskRec = 0;
+                int riskChange = 0;
+                Risk r = new Risk(riskId, riskName, riskContent, riskLevel, riskPossibility, riskGate, riskCreator, riskFollower, riskCreatedTime,riskRec,riskChange);
+                realList.add(r);
+            }
+            rs.close();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+        for(int i=0;i<realList.size();i++){
+            for(int j=0;j<recList.size();j++){
+                if(realList.get(i).getRiskId()==recList.get(j).getRiskId()){
+                    realList.get(i).setRiskRec( realList.get(i).getRiskRec()+1   );
+                }
+            }
+        }
+
+        for(int i=0;i<realList.size();i++){
+            for(int j=0;j<changeList.size();j++){
+                System.out.println(realList.get(i).getRiskId()+"    "+changeList.get(j).getRiskId());
+                if(realList.get(i).getRiskId()==changeList.get(j).getRiskId()){
+                    realList.get(i).setRiskChange( realList.get(i).getRiskChange()+1   );
+                }
+            }
+        }
+
+        return realList;
+
+    }
+
+    public List<Risk> getChangeByTime(String startTime,String endTime){
+        startTime=startTime.split(" ")[0]+"_"+startTime.split(" ")[1];
+        endTime=endTime.split(" ")[0]+"_"+endTime.split(" ")[1];
+
+        List<Risk>realList=getRecChange(startTime,endTime);
+
+        Collections.sort(realList, new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                if(((Risk)o1).getRiskChange()>((Risk)o2).getRiskChange())
+                    return 1;
+                else{
+                    return -1;
+                }
+            }
+        });
+
+
+        for(int i=0;i<realList.size();i++){
+            System.out.println(realList.get(i).getRiskId()+" "+realList.get(i).getRiskContent());
+        }
+
+        return realList;
     }
 
 
@@ -304,6 +489,12 @@ public class DepartBRiskImpl implements RiskService{
         }
 
     }
+
+
+
+
+
+
 
     public void RiskChange(int risk_id){
         String sql = "select * from risk where risk_id = "+ risk_id ;

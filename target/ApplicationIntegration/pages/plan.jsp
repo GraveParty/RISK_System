@@ -243,7 +243,7 @@
                             <!-- Default panel contents -->
                             <div class="panel-heading">风险列表</div>
                             <!-- Table -->
-                            <table class="table table-striped" id="resourceRiskTable">
+                            <table class="table table-striped" id="RiskForPlanTable">
                                 <thead>
                                 <tr>
                                     <th>编号</th>
@@ -268,12 +268,46 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary" id="addplanrisk-btn">添加风险</button>
+                <button type="button" class="btn btn-primary" id="addriskforplan-btn"  onclick="addForPlan()"  href="#" data-toggle="modal" data-target="#SelectRiskModal">添加风险</button>
 
             </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="SelectRiskModal" tabindex="-1" role="dialog" aria-labelledby="SelectRiskModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="ShowRiskModalLabel">风险条目列表</h4>
+            </div>
+            <div class="modal-body">
+
+                <table class="table table-striped" id="addRiskForPlanTable">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>名称</th>
+                        <th>查看</th>
+                        <th>选择</th>
+                    </tr>
+                    </thead>
+                    <tbody id="risktoaddplan-list">
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="addtoplan-btn" onclick="addToThisPlan()"  >导入到此计划</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/js/course.js"></script>
@@ -282,6 +316,7 @@
     loadPlan();
     loadAddPlanModal();
     loadRiskForPlan();
+
 
 </script>
 </body>

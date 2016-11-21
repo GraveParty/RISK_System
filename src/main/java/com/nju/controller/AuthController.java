@@ -145,6 +145,22 @@ public class AuthController {
     }
 
 
+
+    @RequestMapping(value = "/getRecByTime", method = RequestMethod.POST)
+    @ResponseBody
+    public List<Risk> getRecByTime(String startTime,String endTime){
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+        return riskService.getRecByTime(startTime,endTime);
+    }
+
+    @RequestMapping(value = "/getChangeByTime", method = RequestMethod.POST)
+    @ResponseBody
+    public List<Risk> getChangeByTime(String startTime,String endTime){
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+        return riskService.getChangeByTime(startTime,endTime);
+    }
+
+
     @RequestMapping(value = "/addRisk", method = RequestMethod.POST)
     @ResponseBody
     public boolean addRisk(@RequestParam String riskId,@RequestParam String riskName,@RequestParam String riskContent,@RequestParam String riskPossibility,@RequestParam String riskLevel,@RequestParam String riskGate, HttpSession session){
@@ -154,6 +170,17 @@ public class AuthController {
         riskService.addRisk(risk);
         return true;
     }
+
+
+
+    @RequestMapping(value = "/addRiskToPlan", method = RequestMethod.POST)
+    @ResponseBody
+    public boolean addRiskToPlan(@RequestParam String risk_idlist,@RequestParam String plan_idlist){
+        DepartBRiskImpl riskService=new DepartBRiskImpl();
+        riskService.addRiskToPlan(risk_idlist,plan_idlist);
+        return true;
+    }
+
 
     @RequestMapping(value = "/addRiskPlan", method = RequestMethod.POST)
     @ResponseBody

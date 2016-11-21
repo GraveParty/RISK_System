@@ -2,32 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20155144-0c25-42fa-a776-5793d2e4632a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/nju/model/RiskPlan.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/plan.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ApplicationIntegration.war" afterPath="$PROJECT_DIR$/target/ApplicationIntegration.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/classes/com/nju/controller/AuthController.class" afterPath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/classes/com/nju/controller/AuthController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/classes/com/nju/dao/CourseDao.class" afterPath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/classes/com/nju/dao/CourseDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/classes/com/nju/dao/RiskDao.class" afterPath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/classes/com/nju/dao/RiskDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/classes/com/nju/data/DepartBRiskImpl.class" afterPath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/classes/com/nju/data/DepartBRiskImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/classes/com/nju/model/Risk.class" afterPath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/classes/com/nju/model/Risk.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/nju/controller/AuthController.class" afterPath="$PROJECT_DIR$/target/classes/com/nju/controller/AuthController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/nju/dao/CourseDao.class" afterPath="$PROJECT_DIR$/target/classes/com/nju/dao/CourseDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/nju/dao/RiskDao.class" afterPath="$PROJECT_DIR$/target/classes/com/nju/dao/RiskDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/nju/data/DepartBRiskImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/nju/data/DepartBRiskImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/nju/model/Risk.class" afterPath="$PROJECT_DIR$/target/classes/com/nju/model/Risk.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java" afterPath="$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nju/dao/RiskDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/nju/dao/RiskDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/nju/model/Risk.java" afterPath="$PROJECT_DIR$/src/main/java/com/nju/model/Risk.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/course.js" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/course.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/course.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/course.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/ApplicationIntegration/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/plan.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/plan.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ApplicationIntegration/assets/js/course.js" afterPath="$PROJECT_DIR$/target/ApplicationIntegration/assets/js/course.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ApplicationIntegration/pages/course.jsp" afterPath="$PROJECT_DIR$/target/ApplicationIntegration/pages/course.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ApplicationIntegration/pages/index.jsp" afterPath="$PROJECT_DIR$/target/ApplicationIntegration/pages/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ApplicationIntegration/pages/plan.jsp" afterPath="$PROJECT_DIR$/target/ApplicationIntegration/pages/plan.jsp" />
     </list>
     <ignored path="ApplicationIntegration.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,9 +40,19 @@
       <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1034">
-              <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1875">
+              <caret line="155" column="48" selection-start-line="155" selection-start-column="48" selection-end-line="155" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#3074#3075#0" expanded="false" />
+                <element signature="e#3128#3129#0" expanded="false" />
+                <element signature="e#4192#4193#0" expanded="false" />
+                <element signature="e#4224#4225#0" expanded="false" />
+                <element signature="e#4316#4317#0" expanded="false" />
+                <element signature="e#4346#4347#0" expanded="false" />
+                <element signature="e#4446#4447#0" expanded="false" />
+                <element signature="e#4480#4481#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,12 +70,29 @@
       <file leaf-file-name="course.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/course.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="258" column="1" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
+            <state relative-caret-position="269">
+              <caret line="226" column="5" selection-start-line="226" selection-start-column="5" selection-end-line="226" selection-end-column="5" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!block;n#loadAddModal#0" expanded="false" />
+                <element signature="n#!!block;n#loadAddPlanModal#0" expanded="false" />
+                <element signature="n#!!block;n#AddRiskToPlanModal#0" expanded="false" />
+                <element signature="e#7719#9863#0" expanded="false" />
+                <element signature="e#9940#12084#0" expanded="false" />
+                <element signature="n#!!block;n#findChange#0" expanded="false" />
+                <element signature="n#!!block;n#addForPlan#0" expanded="false" />
+                <element signature="n#!!block;n#loadCourses#0" expanded="false" />
+                <element signature="n#!!block;n#loadRiskForPlan#0" expanded="false" />
+                <element signature="n#!!block;n#loadPlan#0" expanded="false" />
+                <element signature="n#!!block;n#comfirmAddToPlan#0" expanded="false" />
+                <element signature="e#24422#24750#0" expanded="false" />
+                <element signature="n#!!block;n#addToPlan#0" expanded="false" />
+                <element signature="n#!!block;n#loadChoosePlanModal#0" expanded="false" />
+                <element signature="n#!!block;n#loadChooseRiskModal#0" expanded="false" />
+                <element signature="n#!!block;n#deleteRisk#0" expanded="false" />
                 <element signature="n#!!block;n#followRisk#0" expanded="false" />
                 <element signature="n#!!block;n#getMyCourses#0" expanded="false" />
+                <element signature="n#!!block;n#getAllStudents#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -86,14 +101,9 @@
       <file leaf-file-name="plan.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/plan.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="80" column="46" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="46" />
-              <folding>
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,14 +111,10 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="150" column="28" selection-start-line="150" selection-start-column="28" selection-end-line="150" selection-end-column="28" />
+            <state relative-caret-position="290">
+              <caret line="455" column="16" selection-start-line="455" selection-start-column="4" selection-end-line="455" selection-end-column="16" />
               <folding>
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -117,78 +123,40 @@
       <file leaf-file-name="DepartBRiskImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="293" column="62" selection-start-line="293" selection-start-column="62" selection-end-line="293" selection-end-column="62" />
+            <state relative-caret-position="5640">
+              <caret line="376" column="95" selection-start-line="376" selection-start-column="95" selection-end-line="376" selection-end-column="95" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#DepartBRiskImpl#0;class#DepartBRiskImpl#0" expanded="false" />
-                <element signature="e#2286#2296#0" expanded="true" />
-                <element signature="e#6414#6420#0" expanded="true" />
-                <marker date="1479578564000" expanded="true" signature="1146:1164" ph="select * fro... risk" />
-                <marker date="1479578564000" expanded="true" signature="2323:2341" ph="select * fro... risk" />
-                <marker date="1479578564000" expanded="true" signature="2323:2345" ph="select * fro... riskplan" />
-                <marker date="1479578564000" expanded="true" signature="3159:3186" ph="insert into risk... " />
-                <marker date="1479578564000" expanded="true" signature="3159:3433" ph="insert into risk... " />
-                <marker date="1479578564000" expanded="true" signature="3759:3936" ph="insert into risk... " />
-                <marker date="1479578564000" expanded="true" signature="4249:4316" ph="insert into riskwarning... " />
-                <marker date="1479578564000" expanded="true" signature="4689:4705" ph="insert into riskplan... " />
-                <marker date="1479578564000" expanded="true" signature="4689:4756" ph="insert into riskproblem... " />
-                <marker date="1479578564000" expanded="true" signature="5016:5051" ph="select * fro... risk" />
-                <marker date="1479578564000" expanded="true" signature="6195:6283" ph="select * fro... risk" />
-                <marker date="1479578564000" expanded="true" signature="6195:6301" ph="select * fro... risk" />
-                <marker date="1479578564000" expanded="true" signature="6232:6283" ph="select risk_... risktoplan" />
-                <marker date="1479578564000" expanded="true" signature="7612:7646" ph="delete from " />
-                <marker date="1479578564000" expanded="true" signature="7934:7969" ph="select * fro... risk" />
-                <marker date="1479578564000" expanded="true" signature="8989:9067" ph="UPDATE risk " />
-                <marker date="1479578564000" expanded="true" signature="9425:9460" ph="select * fro... risk" />
-                <marker date="1479578564000" expanded="true" signature="9712:9777" ph="UPDATE risk " />
-                <marker date="1479578564000" expanded="true" signature="10117:10152" ph="select * fro... risk" />
-                <marker date="1479578564000" expanded="true" signature="10407:10478" ph="UPDATE risk " />
-                <marker date="1479578564000" expanded="true" signature="10944:10979" ph="select * fro... risk" />
-                <marker date="1479578564000" expanded="true" signature="11663:11724" ph="UPDATE risk " />
-                <marker date="1479578564000" expanded="true" signature="11663:11725" ph="UPDATE risk " />
-                <marker date="1479578564000" expanded="true" signature="11663:11858" ph="UPDATE risk " />
-                <marker date="1479578564000" expanded="true" signature="11663:11869" ph="UPDATE risk " />
+                <element signature="e#1027#1033#0" expanded="false" />
+                <marker date="1479656852000" expanded="true" signature="1115:1133" ph="select * fro... risk" />
+                <marker date="1479656852000" expanded="true" signature="2292:2310" ph="select * fro... risk" />
+                <marker date="1479656852000" expanded="true" signature="2292:2314" ph="select * fro... riskplan" />
+                <marker date="1479656852000" expanded="true" signature="3128:3155" ph="insert into risk... " />
+                <marker date="1479656852000" expanded="true" signature="3128:3402" ph="insert into risk... " />
+                <marker date="1479656852000" expanded="true" signature="3728:3905" ph="insert into risk... " />
+                <marker date="1479656852000" expanded="true" signature="4218:4285" ph="insert into riskwarning... " />
+                <marker date="1479656852000" expanded="true" signature="4813:4883" ph="insert into risktoplan... " />
+                <marker date="1479656852000" expanded="true" signature="5392:5408" ph="insert into riskplan... " />
+                <marker date="1479656852000" expanded="true" signature="5392:5459" ph="insert into riskproblem... " />
+                <marker date="1479656852000" expanded="true" signature="5719:5754" ph="select * fro... risk" />
+                <marker date="1479656852000" expanded="true" signature="7537:7634" ph="select * fro... riskwarning" />
+                <marker date="1479656852000" expanded="true" signature="8615:8712" ph="select * fro... riskproblem" />
+                <marker date="1479656852000" expanded="true" signature="9752:9770" ph="select * fro... risk" />
+                <marker date="1479656852000" expanded="true" signature="12429:12517" ph="select * fro... risk" />
+                <marker date="1479656852000" expanded="true" signature="12429:12535" ph="select * fro... risk" />
+                <marker date="1479656852000" expanded="true" signature="12466:12517" ph="select risk_... risktoplan" />
+                <marker date="1479656852000" expanded="true" signature="13846:13880" ph="delete from " />
+                <marker date="1479656852000" expanded="true" signature="14168:14203" ph="select * fro... risk" />
+                <marker date="1479656852000" expanded="true" signature="15223:15301" ph="UPDATE risk " />
+                <marker date="1479656852000" expanded="true" signature="15659:15694" ph="select * fro... risk" />
+                <marker date="1479656852000" expanded="true" signature="15946:16011" ph="UPDATE risk " />
+                <marker date="1479656852000" expanded="true" signature="16357:16392" ph="select * fro... risk" />
+                <marker date="1479656852000" expanded="true" signature="16647:16718" ph="UPDATE risk " />
+                <marker date="1479656852000" expanded="true" signature="17184:17219" ph="select * fro... risk" />
+                <marker date="1479656852000" expanded="true" signature="17903:17964" ph="UPDATE risk " />
+                <marker date="1479656852000" expanded="true" signature="17903:17965" ph="UPDATE risk " />
+                <marker date="1479656852000" expanded="true" signature="17903:18098" ph="UPDATE risk " />
+                <marker date="1479656852000" expanded="true" signature="17903:18109" ph="UPDATE risk " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RiskDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/dao/RiskDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
-              <folding>
-                <element signature="e#1307#1313#0" expanded="true" />
-                <marker date="1479578468000" expanded="true" signature="1395:1413" ph="select * fro... risk" />
-                <marker date="1479578468000" expanded="true" signature="2324:2582" ph="insert into risk... " />
-                <marker date="1479578468000" expanded="true" signature="2907:2941" ph="delete from " />
-                <marker date="1479578468000" expanded="true" signature="3208:3245" ph="select * fro... risk" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RiskServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/service/impl/RiskServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-              <folding>
-                <element signature="e#401#402#0" expanded="true" />
-                <element signature="e#445#446#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="students.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/students.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -222,11 +190,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/nju/model/RiskPlan.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nju/model/Risk.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/course.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/nju/dao/RiskDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/plan.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/assets/js/course.js" />
       </list>
@@ -253,8 +221,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="29" />
-    <option name="y" value="51" />
+    <option name="x" value="27" />
+    <option name="y" value="44" />
     <option name="width" value="1517" />
     <option name="height" value="803" />
   </component>
@@ -283,7 +251,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -362,6 +331,76 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApplicationIntegration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApplicationIntegration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RISK_System" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApplicationIntegration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApplicationIntegration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RISK_System" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApplicationIntegration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApplicationIntegration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RISK_System" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -397,32 +436,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ApplicationIntegration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RISK_System" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -686,8 +699,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1215,40 +1227,41 @@
       <workItem from="1478792816637" duration="1149000" />
       <workItem from="1479094020815" duration="96000" />
       <workItem from="1479101802116" duration="7070000" />
-      <workItem from="1479561958713" duration="22859000" />
+      <workItem from="1479561958713" duration="52130000" />
+      <workItem from="1479664149746" duration="2466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65493000" />
+    <option name="totallyTimeSpent" value="97230000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="29" y="51" width="1517" height="803" extended-state="0" />
-    <editor active="true" />
+    <frame x="27" y="44" width="1517" height="803" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23569483" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29019073" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19973633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19973633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39918256" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1256,37 +1269,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39918256" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.366485" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1301,7 +1283,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1314,7 +1296,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1965">
           <caret line="158" column="99" selection-start-line="158" selection-start-column="99" selection-end-line="158" selection-end-column="99" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3074#3075#0" expanded="false" />
+            <element signature="e#3128#3129#0" expanded="false" />
+            <element signature="e#4192#4193#0" expanded="false" />
+            <element signature="e#4224#4225#0" expanded="false" />
+            <element signature="e#4316#4317#0" expanded="false" />
+            <element signature="e#4346#4347#0" expanded="false" />
+            <element signature="e#4446#4447#0" expanded="false" />
+            <element signature="e#4480#4481#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1344,11 +1336,7 @@
         <state relative-caret-position="2715">
           <caret line="181" column="64" selection-start-line="181" selection-start-column="64" selection-end-line="181" selection-end-column="64" />
           <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1359,6 +1347,25 @@
           <caret line="301" column="24" selection-start-line="301" selection-start-column="24" selection-end-line="301" selection-end-column="24" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#loadAddModal#0" expanded="false" />
+            <element signature="n#!!block;n#loadAddPlanModal#0" expanded="false" />
+            <element signature="n#!!block;n#AddRiskToPlanModal#0" expanded="false" />
+            <element signature="e#7719#9863#0" expanded="false" />
+            <element signature="e#9940#12084#0" expanded="false" />
+            <element signature="n#!!block;n#findChange#0" expanded="false" />
+            <element signature="n#!!block;n#addForPlan#0" expanded="false" />
+            <element signature="n#!!block;n#loadCourses#0" expanded="false" />
+            <element signature="n#!!block;n#loadRiskForPlan#0" expanded="false" />
+            <element signature="n#!!block;n#loadPlan#0" expanded="false" />
+            <element signature="n#!!block;n#comfirmAddToPlan#0" expanded="false" />
+            <element signature="e#24422#24750#0" expanded="false" />
+            <element signature="n#!!block;n#addToPlan#0" expanded="false" />
+            <element signature="n#!!block;n#loadChoosePlanModal#0" expanded="false" />
+            <element signature="n#!!block;n#loadChooseRiskModal#0" expanded="false" />
+            <element signature="n#!!block;n#deleteRisk#0" expanded="false" />
+            <element signature="n#!!block;n#followRisk#0" expanded="false" />
+            <element signature="n#!!block;n#getMyCourses#0" expanded="false" />
+            <element signature="n#!!block;n#getAllStudents#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1376,7 +1383,7 @@
         <state relative-caret-position="975">
           <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
           <folding>
-            <element signature="e#1307#1313#0" expanded="true" />
+            <element signature="e#1307#1313#0" expanded="false" />
             <marker date="1479578468000" expanded="true" signature="1395:1413" ph="select * fro... risk" />
             <marker date="1479578468000" expanded="true" signature="2324:2582" ph="insert into risk... " />
             <marker date="1479578468000" expanded="true" signature="2907:2941" ph="delete from " />
@@ -1389,10 +1396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding>
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1401,35 +1404,36 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#DepartBRiskImpl#0;class#DepartBRiskImpl#0" expanded="false" />
-            <element signature="e#2286#2296#0" expanded="true" />
-            <element signature="e#6414#6420#0" expanded="true" />
-            <marker date="1479578564000" expanded="true" signature="1146:1164" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="2323:2341" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="2323:2345" ph="select * fro... riskplan" />
-            <marker date="1479578564000" expanded="true" signature="3159:3186" ph="insert into risk... " />
-            <marker date="1479578564000" expanded="true" signature="3159:3433" ph="insert into risk... " />
-            <marker date="1479578564000" expanded="true" signature="3759:3936" ph="insert into risk... " />
-            <marker date="1479578564000" expanded="true" signature="4249:4316" ph="insert into riskwarning... " />
-            <marker date="1479578564000" expanded="true" signature="4689:4705" ph="insert into riskplan... " />
-            <marker date="1479578564000" expanded="true" signature="4689:4756" ph="insert into riskproblem... " />
-            <marker date="1479578564000" expanded="true" signature="5016:5051" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="6195:6283" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="6195:6301" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="6232:6283" ph="select risk_... risktoplan" />
-            <marker date="1479578564000" expanded="true" signature="7612:7646" ph="delete from " />
-            <marker date="1479578564000" expanded="true" signature="7934:7969" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="8989:9067" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="9425:9460" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="9712:9777" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="10117:10152" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="10407:10478" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="10944:10979" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="11663:11724" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="11663:11725" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="11663:11858" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="11663:11869" ph="UPDATE risk " />
+            <element signature="e#1027#1033#0" expanded="false" />
+            <marker date="1479656852000" expanded="true" signature="1115:1133" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="2292:2310" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="2292:2314" ph="select * fro... riskplan" />
+            <marker date="1479656852000" expanded="true" signature="3128:3155" ph="insert into risk... " />
+            <marker date="1479656852000" expanded="true" signature="3128:3402" ph="insert into risk... " />
+            <marker date="1479656852000" expanded="true" signature="3728:3905" ph="insert into risk... " />
+            <marker date="1479656852000" expanded="true" signature="4218:4285" ph="insert into riskwarning... " />
+            <marker date="1479656852000" expanded="true" signature="4813:4883" ph="insert into risktoplan... " />
+            <marker date="1479656852000" expanded="true" signature="5392:5408" ph="insert into riskplan... " />
+            <marker date="1479656852000" expanded="true" signature="5392:5459" ph="insert into riskproblem... " />
+            <marker date="1479656852000" expanded="true" signature="5719:5754" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="7537:7634" ph="select * fro... riskwarning" />
+            <marker date="1479656852000" expanded="true" signature="8615:8712" ph="select * fro... riskproblem" />
+            <marker date="1479656852000" expanded="true" signature="9752:9770" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="12429:12517" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="12429:12535" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="12466:12517" ph="select risk_... risktoplan" />
+            <marker date="1479656852000" expanded="true" signature="13846:13880" ph="delete from " />
+            <marker date="1479656852000" expanded="true" signature="14168:14203" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="15223:15301" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="15659:15694" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="15946:16011" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="16357:16392" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="16647:16718" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17184:17219" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="17903:17964" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17903:17965" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17903:18098" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17903:18109" ph="UPDATE risk " />
           </folding>
         </state>
       </provider>
@@ -1438,10 +1442,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1830">
           <caret line="122" column="53" selection-start-line="122" selection-start-column="47" selection-end-line="122" selection-end-column="53" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1449,7 +1450,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2535">
           <caret line="169" column="5" selection-start-line="169" selection-start-column="5" selection-end-line="169" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3074#3075#0" expanded="false" />
+            <element signature="e#3128#3129#0" expanded="false" />
+            <element signature="e#4192#4193#0" expanded="false" />
+            <element signature="e#4224#4225#0" expanded="false" />
+            <element signature="e#4316#4317#0" expanded="false" />
+            <element signature="e#4346#4347#0" expanded="false" />
+            <element signature="e#4446#4447#0" expanded="false" />
+            <element signature="e#4480#4481#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1469,11 +1480,7 @@
         <state relative-caret-position="975">
           <caret line="65" column="47" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
           <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1484,6 +1491,25 @@
           <caret line="131" column="37" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="37" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#loadAddModal#0" expanded="false" />
+            <element signature="n#!!block;n#loadAddPlanModal#0" expanded="false" />
+            <element signature="n#!!block;n#AddRiskToPlanModal#0" expanded="false" />
+            <element signature="e#7719#9863#0" expanded="false" />
+            <element signature="e#9940#12084#0" expanded="false" />
+            <element signature="n#!!block;n#findChange#0" expanded="false" />
+            <element signature="n#!!block;n#addForPlan#0" expanded="false" />
+            <element signature="n#!!block;n#loadCourses#0" expanded="false" />
+            <element signature="n#!!block;n#loadRiskForPlan#0" expanded="false" />
+            <element signature="n#!!block;n#loadPlan#0" expanded="false" />
+            <element signature="n#!!block;n#comfirmAddToPlan#0" expanded="false" />
+            <element signature="e#24422#24750#0" expanded="false" />
+            <element signature="n#!!block;n#addToPlan#0" expanded="false" />
+            <element signature="n#!!block;n#loadChoosePlanModal#0" expanded="false" />
+            <element signature="n#!!block;n#loadChooseRiskModal#0" expanded="false" />
+            <element signature="n#!!block;n#deleteRisk#0" expanded="false" />
+            <element signature="n#!!block;n#followRisk#0" expanded="false" />
+            <element signature="n#!!block;n#getMyCourses#0" expanded="false" />
+            <element signature="n#!!block;n#getAllStudents#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1493,42 +1519,20 @@
         <state relative-caret-position="1215">
           <caret line="81" column="46" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
           <folding>
-            <element signature="e#1399#1400#0" expanded="false" />
-            <element signature="e#1428#1429#0" expanded="false" />
-            <element signature="e#1469#1470#0" expanded="false" />
-            <element signature="e#1505#1506#0" expanded="false" />
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1619#1620#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1697#1698#0" expanded="false" />
-            <element signature="e#1731#1732#0" expanded="false" />
-            <element signature="e#1785#1786#0" expanded="false" />
-            <element signature="e#1831#1832#0" expanded="false" />
-            <element signature="e#1867#1868#0" expanded="false" />
-            <element signature="e#1899#1900#0" expanded="false" />
-            <element signature="e#1949#1950#0" expanded="false" />
-            <element signature="e#1991#1992#0" expanded="false" />
-            <element signature="e#2033#2034#0" expanded="false" />
-            <element signature="e#2071#2072#0" expanded="false" />
-            <element signature="e#2133#2134#0" expanded="false" />
-            <element signature="e#2187#2188#0" expanded="false" />
-            <element signature="e#2222#2223#0" expanded="false" />
-            <element signature="e#2253#2254#0" expanded="false" />
-            <element signature="e#2301#2302#0" expanded="false" />
-            <element signature="e#2341#2342#0" expanded="false" />
-            <element signature="e#2379#2380#0" expanded="false" />
-            <element signature="e#2413#2414#0" expanded="false" />
-            <element signature="e#2467#2468#0" expanded="true" />
-            <element signature="e#2513#2514#0" expanded="true" />
-            <element signature="e#2552#2553#0" expanded="false" />
-            <element signature="e#2587#2588#0" expanded="false" />
-            <element signature="e#2643#2644#0" expanded="false" />
-            <element signature="e#2691#2692#0" expanded="false" />
-            <element signature="e#2733#2734#0" expanded="false" />
-            <element signature="e#2771#2772#0" expanded="false" />
-            <element signature="e#2833#2834#0" expanded="true" />
-            <element signature="e#2887#2888#0" expanded="true" />
+            <element signature="e#1098#1099#0" expanded="false" />
+            <element signature="e#1128#1129#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1209#1210#0" expanded="false" />
+            <element signature="e#1243#1244#0" expanded="false" />
+            <element signature="e#1276#1277#0" expanded="false" />
+            <element signature="e#1325#1326#0" expanded="false" />
+            <element signature="e#1369#1370#0" expanded="false" />
+            <element signature="e#1540#1541#0" expanded="false" />
+            <element signature="e#1571#1572#0" expanded="false" />
+            <element signature="e#1619#1620#0" expanded="false" />
+            <element signature="e#1659#1660#0" expanded="false" />
+            <element signature="e#2833#2834#0" expanded="false" />
+            <element signature="e#2887#2888#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1538,35 +1542,36 @@
         <state relative-caret-position="2295">
           <caret line="153" column="60" selection-start-line="153" selection-start-column="60" selection-end-line="153" selection-end-column="60" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#DepartBRiskImpl#0;class#DepartBRiskImpl#0" expanded="false" />
-            <element signature="e#2286#2296#0" expanded="true" />
-            <element signature="e#6414#6420#0" expanded="true" />
-            <marker date="1479578564000" expanded="true" signature="1146:1164" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="2323:2341" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="2323:2345" ph="select * fro... riskplan" />
-            <marker date="1479578564000" expanded="true" signature="3159:3186" ph="insert into risk... " />
-            <marker date="1479578564000" expanded="true" signature="3159:3433" ph="insert into risk... " />
-            <marker date="1479578564000" expanded="true" signature="3759:3936" ph="insert into risk... " />
-            <marker date="1479578564000" expanded="true" signature="4249:4316" ph="insert into riskwarning... " />
-            <marker date="1479578564000" expanded="true" signature="4689:4705" ph="insert into riskplan... " />
-            <marker date="1479578564000" expanded="true" signature="4689:4756" ph="insert into riskproblem... " />
-            <marker date="1479578564000" expanded="true" signature="5016:5051" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="6195:6283" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="6195:6301" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="6232:6283" ph="select risk_... risktoplan" />
-            <marker date="1479578564000" expanded="true" signature="7612:7646" ph="delete from " />
-            <marker date="1479578564000" expanded="true" signature="7934:7969" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="8989:9067" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="9425:9460" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="9712:9777" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="10117:10152" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="10407:10478" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="10944:10979" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="11663:11724" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="11663:11725" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="11663:11858" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="11663:11869" ph="UPDATE risk " />
+            <element signature="e#1027#1033#0" expanded="false" />
+            <marker date="1479656852000" expanded="true" signature="1115:1133" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="2292:2310" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="2292:2314" ph="select * fro... riskplan" />
+            <marker date="1479656852000" expanded="true" signature="3128:3155" ph="insert into risk... " />
+            <marker date="1479656852000" expanded="true" signature="3128:3402" ph="insert into risk... " />
+            <marker date="1479656852000" expanded="true" signature="3728:3905" ph="insert into risk... " />
+            <marker date="1479656852000" expanded="true" signature="4218:4285" ph="insert into riskwarning... " />
+            <marker date="1479656852000" expanded="true" signature="4813:4883" ph="insert into risktoplan... " />
+            <marker date="1479656852000" expanded="true" signature="5392:5408" ph="insert into riskplan... " />
+            <marker date="1479656852000" expanded="true" signature="5392:5459" ph="insert into riskproblem... " />
+            <marker date="1479656852000" expanded="true" signature="5719:5754" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="7537:7634" ph="select * fro... riskwarning" />
+            <marker date="1479656852000" expanded="true" signature="8615:8712" ph="select * fro... riskproblem" />
+            <marker date="1479656852000" expanded="true" signature="9752:9770" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="12429:12517" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="12429:12535" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="12466:12517" ph="select risk_... risktoplan" />
+            <marker date="1479656852000" expanded="true" signature="13846:13880" ph="delete from " />
+            <marker date="1479656852000" expanded="true" signature="14168:14203" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="15223:15301" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="15659:15694" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="15946:16011" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="16357:16392" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="16647:16718" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17184:17219" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="17903:17964" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17903:17965" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17903:18098" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17903:18109" ph="UPDATE risk " />
           </folding>
         </state>
       </provider>
@@ -1576,7 +1581,7 @@
         <state relative-caret-position="1470">
           <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
-            <element signature="e#1307#1313#0" expanded="true" />
+            <element signature="e#1307#1313#0" expanded="false" />
             <marker date="1479578468000" expanded="true" signature="1395:1413" ph="select * fro... risk" />
             <marker date="1479578468000" expanded="true" signature="2324:2582" ph="insert into risk... " />
             <marker date="1479578468000" expanded="true" signature="2907:2941" ph="delete from " />
@@ -1589,9 +1594,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="102" column="36" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3074#3075#0" expanded="false" />
+            <element signature="e#3128#3129#0" expanded="false" />
+            <element signature="e#4192#4193#0" expanded="false" />
+            <element signature="e#4224#4225#0" expanded="false" />
+            <element signature="e#4316#4317#0" expanded="false" />
+            <element signature="e#4346#4347#0" expanded="false" />
+            <element signature="e#4446#4447#0" expanded="false" />
+            <element signature="e#4480#4481#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1600,15 +1620,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3074#3075#0" expanded="false" />
+            <element signature="e#3128#3129#0" expanded="false" />
+            <element signature="e#4192#4193#0" expanded="false" />
+            <element signature="e#4224#4225#0" expanded="false" />
+            <element signature="e#4316#4317#0" expanded="false" />
+            <element signature="e#4346#4347#0" expanded="false" />
+            <element signature="e#4446#4447#0" expanded="false" />
+            <element signature="e#4480#4481#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1642,7 +1664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1686,7 +1707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1694,7 +1714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-430">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1702,7 +1721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1750,7 +1768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1759,26 +1776,26 @@
         <state relative-caret-position="495">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#901#902#0" expanded="true" />
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1068#1069#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1172#1173#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1314#1315#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1414#1415#0" expanded="true" />
-            <element signature="e#1456#1457#0" expanded="true" />
-            <element signature="e#1526#1527#0" expanded="true" />
-            <element signature="e#1588#1589#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="false" />
+            <element signature="e#718#719#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#834#835#0" expanded="false" />
+            <element signature="e#868#869#0" expanded="false" />
+            <element signature="e#901#902#0" expanded="false" />
+            <element signature="e#950#951#0" expanded="false" />
+            <element signature="e#994#995#0" expanded="false" />
+            <element signature="e#1033#1034#0" expanded="false" />
+            <element signature="e#1068#1069#0" expanded="false" />
+            <element signature="e#1124#1125#0" expanded="false" />
+            <element signature="e#1172#1173#0" expanded="false" />
+            <element signature="e#1214#1215#0" expanded="false" />
+            <element signature="e#1252#1253#0" expanded="false" />
+            <element signature="e#1314#1315#0" expanded="false" />
+            <element signature="e#1368#1369#0" expanded="false" />
+            <element signature="e#1414#1415#0" expanded="false" />
+            <element signature="e#1456#1457#0" expanded="false" />
+            <element signature="e#1526#1527#0" expanded="false" />
+            <element signature="e#1588#1589#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1803,20 +1820,20 @@
         <state relative-caret-position="351">
           <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding>
-            <element signature="e#1098#1099#0" expanded="true" />
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-            <element signature="e#1209#1210#0" expanded="true" />
-            <element signature="e#1243#1244#0" expanded="true" />
-            <element signature="e#1276#1277#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1369#1370#0" expanded="true" />
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1619#1620#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#2833#2834#0" expanded="true" />
-            <element signature="e#2887#2888#0" expanded="true" />
+            <element signature="e#1098#1099#0" expanded="false" />
+            <element signature="e#1128#1129#0" expanded="false" />
+            <element signature="e#1171#1172#0" expanded="false" />
+            <element signature="e#1209#1210#0" expanded="false" />
+            <element signature="e#1243#1244#0" expanded="false" />
+            <element signature="e#1276#1277#0" expanded="false" />
+            <element signature="e#1325#1326#0" expanded="false" />
+            <element signature="e#1369#1370#0" expanded="false" />
+            <element signature="e#1540#1541#0" expanded="false" />
+            <element signature="e#1571#1572#0" expanded="false" />
+            <element signature="e#1619#1620#0" expanded="false" />
+            <element signature="e#1659#1660#0" expanded="false" />
+            <element signature="e#2833#2834#0" expanded="false" />
+            <element signature="e#2887#2888#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1826,7 +1843,7 @@
         <state relative-caret-position="261">
           <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
           <folding>
-            <element signature="e#1307#1313#0" expanded="true" />
+            <element signature="e#1307#1313#0" expanded="false" />
             <marker date="1479578468000" expanded="true" signature="1395:1413" ph="select * fro... risk" />
             <marker date="1479578468000" expanded="true" signature="2324:2582" ph="insert into risk... " />
             <marker date="1479578468000" expanded="true" signature="2907:2941" ph="delete from " />
@@ -1839,10 +1856,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
           <caret line="203" column="0" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1858,56 +1872,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="155" column="48" selection-start-line="155" selection-start-column="48" selection-end-line="155" selection-end-column="48" />
           <folding>
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3074#3075#0" expanded="false" />
+            <element signature="e#3128#3129#0" expanded="false" />
+            <element signature="e#4192#4193#0" expanded="false" />
+            <element signature="e#4224#4225#0" expanded="false" />
+            <element signature="e#4316#4317#0" expanded="false" />
+            <element signature="e#4346#4347#0" expanded="false" />
+            <element signature="e#4446#4447#0" expanded="false" />
+            <element signature="e#4480#4481#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/data/DepartBRiskImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="293" column="62" selection-start-line="293" selection-start-column="62" selection-end-line="293" selection-end-column="62" />
+        <state relative-caret-position="5640">
+          <caret line="376" column="95" selection-start-line="376" selection-start-column="95" selection-end-line="376" selection-end-column="95" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#DepartBRiskImpl#0;class#DepartBRiskImpl#0" expanded="false" />
-            <element signature="e#2286#2296#0" expanded="true" />
-            <element signature="e#6414#6420#0" expanded="true" />
-            <marker date="1479578564000" expanded="true" signature="1146:1164" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="2323:2341" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="2323:2345" ph="select * fro... riskplan" />
-            <marker date="1479578564000" expanded="true" signature="3159:3186" ph="insert into risk... " />
-            <marker date="1479578564000" expanded="true" signature="3159:3433" ph="insert into risk... " />
-            <marker date="1479578564000" expanded="true" signature="3759:3936" ph="insert into risk... " />
-            <marker date="1479578564000" expanded="true" signature="4249:4316" ph="insert into riskwarning... " />
-            <marker date="1479578564000" expanded="true" signature="4689:4705" ph="insert into riskplan... " />
-            <marker date="1479578564000" expanded="true" signature="4689:4756" ph="insert into riskproblem... " />
-            <marker date="1479578564000" expanded="true" signature="5016:5051" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="6195:6283" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="6195:6301" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="6232:6283" ph="select risk_... risktoplan" />
-            <marker date="1479578564000" expanded="true" signature="7612:7646" ph="delete from " />
-            <marker date="1479578564000" expanded="true" signature="7934:7969" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="8989:9067" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="9425:9460" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="9712:9777" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="10117:10152" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="10407:10478" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="10944:10979" ph="select * fro... risk" />
-            <marker date="1479578564000" expanded="true" signature="11663:11724" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="11663:11725" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="11663:11858" ph="UPDATE risk " />
-            <marker date="1479578564000" expanded="true" signature="11663:11869" ph="UPDATE risk " />
+            <element signature="e#1027#1033#0" expanded="false" />
+            <marker date="1479656852000" expanded="true" signature="1115:1133" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="2292:2310" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="2292:2314" ph="select * fro... riskplan" />
+            <marker date="1479656852000" expanded="true" signature="3128:3155" ph="insert into risk... " />
+            <marker date="1479656852000" expanded="true" signature="3128:3402" ph="insert into risk... " />
+            <marker date="1479656852000" expanded="true" signature="3728:3905" ph="insert into risk... " />
+            <marker date="1479656852000" expanded="true" signature="4218:4285" ph="insert into riskwarning... " />
+            <marker date="1479656852000" expanded="true" signature="4813:4883" ph="insert into risktoplan... " />
+            <marker date="1479656852000" expanded="true" signature="5392:5408" ph="insert into riskplan... " />
+            <marker date="1479656852000" expanded="true" signature="5392:5459" ph="insert into riskproblem... " />
+            <marker date="1479656852000" expanded="true" signature="5719:5754" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="7537:7634" ph="select * fro... riskwarning" />
+            <marker date="1479656852000" expanded="true" signature="8615:8712" ph="select * fro... riskproblem" />
+            <marker date="1479656852000" expanded="true" signature="9752:9770" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="12429:12517" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="12429:12535" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="12466:12517" ph="select risk_... risktoplan" />
+            <marker date="1479656852000" expanded="true" signature="13846:13880" ph="delete from " />
+            <marker date="1479656852000" expanded="true" signature="14168:14203" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="15223:15301" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="15659:15694" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="15946:16011" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="16357:16392" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="16647:16718" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17184:17219" ph="select * fro... risk" />
+            <marker date="1479656852000" expanded="true" signature="17903:17964" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17903:17965" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17903:18098" ph="UPDATE risk " />
+            <marker date="1479656852000" expanded="true" signature="17903:18109" ph="UPDATE risk " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nju/controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1919,41 +1940,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/plan.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="150" column="28" selection-start-line="150" selection-start-column="28" selection-end-line="150" selection-end-column="28" />
-          <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/plan.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="80" column="46" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="46" />
+        <state relative-caret-position="290">
+          <caret line="455" column="16" selection-start-line="455" selection-start-column="4" selection-end-line="455" selection-end-column="16" />
           <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/course.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="258" column="1" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
+        <state relative-caret-position="269">
+          <caret line="226" column="5" selection-start-line="226" selection-start-column="5" selection-end-line="226" selection-end-column="5" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#loadAddModal#0" expanded="false" />
+            <element signature="n#!!block;n#loadAddPlanModal#0" expanded="false" />
+            <element signature="n#!!block;n#AddRiskToPlanModal#0" expanded="false" />
+            <element signature="e#7719#9863#0" expanded="false" />
+            <element signature="e#9940#12084#0" expanded="false" />
+            <element signature="n#!!block;n#findChange#0" expanded="false" />
+            <element signature="n#!!block;n#addForPlan#0" expanded="false" />
+            <element signature="n#!!block;n#loadCourses#0" expanded="false" />
+            <element signature="n#!!block;n#loadRiskForPlan#0" expanded="false" />
+            <element signature="n#!!block;n#loadPlan#0" expanded="false" />
+            <element signature="n#!!block;n#comfirmAddToPlan#0" expanded="false" />
+            <element signature="e#24422#24750#0" expanded="false" />
+            <element signature="n#!!block;n#addToPlan#0" expanded="false" />
+            <element signature="n#!!block;n#loadChoosePlanModal#0" expanded="false" />
+            <element signature="n#!!block;n#loadChooseRiskModal#0" expanded="false" />
+            <element signature="n#!!block;n#deleteRisk#0" expanded="false" />
             <element signature="n#!!block;n#followRisk#0" expanded="false" />
             <element signature="n#!!block;n#getMyCourses#0" expanded="false" />
+            <element signature="n#!!block;n#getAllStudents#0" expanded="false" />
           </folding>
         </state>
       </provider>

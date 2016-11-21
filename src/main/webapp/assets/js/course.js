@@ -2,6 +2,8 @@
  * Created by 传旺 on 2016/6/6.
  */
 
+
+
 /**
  * 初始化选课模态框
  */
@@ -143,14 +145,13 @@ function loadAddModal() {
 }
 
 
+
 /**
  * 初始化添加风险态框
  */
 function loadAddPlanModal() {
     $('#addRiskPlanModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget) // Button that triggered the modal
-
-
         var modal = $(this)
         modal.find('.modal-title').html('添加风险计划')
 
@@ -158,9 +159,6 @@ function loadAddPlanModal() {
             var riskPlanId = 0
             var riskPlanName= $("#riskplan-name").val()
             var riskPlanContent= $("#riskplan-content").val()
-
-
-
             $.ajax({
                 url:"/addRiskPlan",
                 type:"post",
@@ -180,55 +178,229 @@ function loadAddPlanModal() {
     })
 }
 
+//------------------------
+function AddRiskToPlanModal() {
 
-// function deleteRiskModal(){
-//     $('#deleteRiskModal').on('show.bs.modal', function (event) {
-//         var button = $(event.relatedTarget) // Button that triggered the modal
-//         var modal = $(this)
-//         modal.find('.modal-title').html('删除风险')
-//
-//         $('#comfirm-delete-btn')[0].onclick = function () {
-//             var riskId = 0
-//             var riskName= $("#risk-name").val()
-//             var riskContent= $("#risk-content").val()
-//             var riskPossibility= $("#risk-possibility").val()
-//             var riskLevel= $("#risk-level").val()
-//             var riskGate= $("#risk-gate").val()
-//             alert(riskName);
-//
-//             $.ajax({
-//                 url:"/deleteRisk",
-//                 type:"post",
-//                 data:{
-//                     riskId:riskId,
-//                     riskName:riskName,
-//                     riskContent:riskContent,
-//                     riskPossibility:riskPossibility,
-//                     riskLevel:riskLevel,
-//                     riskGate:riskGate
-//                 },
-//                 success:function() {
-//                     window.location.reload();
-//                 },
-//                 error:function () {
-//                     alert("退课失败");
-//                 }
-//             })
-//         }
-//     })
-// }
+
+        $('#addtoplan-btn')[0].onclick = function () {
+            var riskPlanId = 0
+            var riskPlanName= $("#riskplan-name").val()
+            var riskPlanContent= $("#riskplan-content").val()
+            $.ajax({
+                url:"/addRiskPlan",
+                type:"post",
+                data:{
+                    riskPlanId:riskPlanId,
+                    riskPlanName:riskPlanName,
+                    riskPlanContent:riskPlanContent
+                },
+                success:function() {
+                    window.location.reload();
+                },
+                error:function () {
+                    alert("添加失败");
+                }
+            })
+        }
+
+}
+
+
+
+function showchartrec() {
+    var ctx = $("#myRecChart").get(0).getContext("2d");
+    alert("aa");
+    var data = {
+        labels : ["January","February","March","April","May","June","July"],
+        datasets : [
+            {
+                fillColor : "rgba(220,220,220,0.5)",
+                strokeColor : "rgba(220,220,220,1)",
+                data : [65,59,90,81,56,55,40]
+            },
+            {
+                fillColor : "rgba(151,187,205,0.5)",
+                strokeColor : "rgba(151,187,205,1)",
+                data : [28,48,40,19,96,27,100]
+            }
+        ]
+    }
+
+
+    alert("aaaaaa");
+
+    Bar.defaults = {
+
+        //Boolean - If we show the scale above the chart data
+        scaleOverlay : false,
+
+        //Boolean - If we want to override with a hard coded scale
+        scaleOverride : false,
+
+        //** Required if scaleOverride is true **
+        //Number - The number of steps in a hard coded scale
+        scaleSteps : null,
+        //Number - The value jump in the hard coded scale
+        scaleStepWidth : null,
+        //Number - The scale starting value
+        scaleStartValue : null,
+
+        //String - Colour of the scale line
+        scaleLineColor : "rgba(0,0,0,.1)",
+
+        //Number - Pixel width of the scale line
+        scaleLineWidth : 1,
+
+        //Boolean - Whether to show labels on the scale
+        scaleShowLabels : false,
+
+        //Interpolated JS string - can access value
+        scaleLabel : "<%=value%>",
+
+        //String - Scale label font declaration for the scale label
+        scaleFontFamily : "'Arial'",
+
+        //Number - Scale label font size in pixels
+        scaleFontSize : 12,
+
+        //String - Scale label font weight style
+        scaleFontStyle : "normal",
+
+        //String - Scale label font colour
+        scaleFontColor : "#666",
+
+        ///Boolean - Whether grid lines are shown across the chart
+        scaleShowGridLines : true,
+
+        //String - Colour of the grid lines
+        scaleGridLineColor : "rgba(0,0,0,.05)",
+
+        //Number - Width of the grid lines
+        scaleGridLineWidth : 1,
+
+        //Boolean - If there is a stroke on each bar
+        barShowStroke : true,
+
+        //Number - Pixel width of the bar stroke
+        barStrokeWidth : 2,
+
+        //Number - Spacing between each of the X value sets
+        barValueSpacing : 5,
+
+        //Number - Spacing between data sets within X values
+        barDatasetSpacing : 1,
+
+        //Boolean - Whether to animate the chart
+        animation : true,
+
+        //Number - Number of animation steps
+        animationSteps : 60,
+
+        //String - Animation easing effect
+        animationEasing : "easeOutQuart",
+
+        //Function - Fires when the animation is complete
+        onAnimationComplete : null
+
+    }
+
+
+    var myNewChart =new Chart(ctx).Bar(data,options);
+
+    Bar.defaults = {
+
+        //Boolean - If we show the scale above the chart data
+        scaleOverlay : false,
+
+        //Boolean - If we want to override with a hard coded scale
+        scaleOverride : false,
+
+        //** Required if scaleOverride is true **
+        //Number - The number of steps in a hard coded scale
+        scaleSteps : null,
+        //Number - The value jump in the hard coded scale
+        scaleStepWidth : null,
+        //Number - The scale starting value
+        scaleStartValue : null,
+
+        //String - Colour of the scale line
+        scaleLineColor : "rgba(0,0,0,.1)",
+
+        //Number - Pixel width of the scale line
+        scaleLineWidth : 1,
+
+        //Boolean - Whether to show labels on the scale
+        scaleShowLabels : false,
+
+        //Interpolated JS string - can access value
+        scaleLabel : "<%=value%>",
+
+        //String - Scale label font declaration for the scale label
+        scaleFontFamily : "'Arial'",
+
+        //Number - Scale label font size in pixels
+        scaleFontSize : 12,
+
+        //String - Scale label font weight style
+        scaleFontStyle : "normal",
+
+        //String - Scale label font colour
+        scaleFontColor : "#666",
+
+        ///Boolean - Whether grid lines are shown across the chart
+        scaleShowGridLines : true,
+
+        //String - Colour of the grid lines
+        scaleGridLineColor : "rgba(0,0,0,.05)",
+
+        //Number - Width of the grid lines
+        scaleGridLineWidth : 1,
+
+        //Boolean - If there is a stroke on each bar
+        barShowStroke : true,
+
+        //Number - Pixel width of the bar stroke
+        barStrokeWidth : 2,
+
+        //Number - Spacing between each of the X value sets
+        barValueSpacing : 5,
+
+        //Number - Spacing between data sets within X values
+        barDatasetSpacing : 1,
+
+        //Boolean - Whether to animate the chart
+        animation : true,
+
+        //Number - Number of animation steps
+        animationSteps : 60,
+
+        //String - Animation easing effect
+        animationEasing : "easeOutQuart",
+
+        //Function - Fires when the animation is complete
+        onAnimationComplete : null
+
+    }
+}
+
 
 function findRec(){
+    var startTime=$("#startTime").val();
+    var endTime=$("#endTime").val();
+
+
     $.ajax({
-        url:"/getAllRisks",
+        url:"/getRecByTime",
         type:"post",
         data:{
-
+            startTime:startTime,
+            endTime:endTime
         },
 
         success:function (data) {
             console.log(data);
-            var courseList = $("#riskplan-list");
+            var courseList = $("#riskRec-list");
+            courseList.html("");
             for (var i = 0; i < data.length; i++){
                 var riskId = data[i]['riskId'];
                 var riskName = data[i]['riskName'];
@@ -251,21 +423,149 @@ function findRec(){
                 content += '<td><a onclick="loadChooseRiskModal(this.id)" href="#" data-toggle="modal" data-target="#FollowAddModal" id=' + riskId + ':' + riskName + ':' + riskCreator + ':' + riskCreatedTime + ':' + riskContent + ':' + riskFollower + ':' + riskLevel + ':' + riskPossibility + ':' + riskGate +':' + riskRec +':' + riskChange +'>查看</a></td>';
                 content += '<td><a onclick="loadDeleteRiskModal(this.id)" href="#" data-toggle="modal" data-target="#deleteRiskModal" id=' + riskId +'>删除</a></td>';
 
+                content += '<td><label><input type="checkbox" id=' + (i+1000) +' , name=' + riskId +'></label></td>';
+
 
                 content += '</tr>';
                 courseList.append(content);
 
             }
- 
+
+        }
+
+    });
+
+}
+
+function findChange(){
+    var startTime=$("#startTime").val();
+    var endTime=$("#endTime").val();
+    $.ajax({
+        url:"/getChangeByTime",
+        type:"post",
+        data:{
+            startTime:startTime,
+            endTime:endTime
+        },
+
+        success:function (data) {
+            console.log(data);
+            var courseList = $("#riskChange-list");
+            courseList.html("");
+            for (var i = 0; i < data.length; i++){
+                var riskId = data[i]['riskId'];
+                var riskName = data[i]['riskName'];
+                var riskCreator = data[i]['riskCreator'];
+                var riskContent = data[i]['riskContent'];
+
+                var riskFollower = data[i]['riskFollower'];
+                var riskLevel = data[i]['riskLevel'];
+                var riskPossibility = data[i]['riskPossibility'];
+                var riskGate = data[i]['riskGate'];
+                var riskCreatedTime=data[i]['riskCreatedTime'];
+                var riskRec=data[i]['riskRec'];
+                var riskChange=data[i]['riskChange'];
+
+                var content = '<tr>' +
+                    '<th scope="row">' + riskId + '</th>' +
+                    '<td>' + riskName + '</td>' +
+                    '<td>' + riskChange + '</td>' +
+                    '<td>' + riskRec + '</td>' ;
+
+                content += '<td><a onclick="loadChooseRiskModal(this.id)" href="#" data-toggle="modal" data-target="#FollowAddModal" id=' + riskId + ':' + riskName + ':' + riskCreator + ':' + riskCreatedTime + ':' + riskContent + ':' + riskFollower + ':' + riskLevel + ':' + riskPossibility + ':' + riskGate +':' + riskRec +':' + riskChange +':' + riskChange +'>查看</a></td>';
+
+                content += '<td><a onclick="loadDeleteRiskModal(this.id)" href="#" data-toggle="modal" data-target="#deleteRiskModal" id=' + riskId +':' + riskChange +'>删除</a></td>';
+
+                content += '<td><label><input type="checkbox" id=' + (i+5000) +' , name=' + riskId +'></label></td>';
+
+                content += '</tr>';
+                courseList.append(content);
+
+            }
+
         }
 
     });
 }
 
-function findChange(){
-    alert("nmslo");
+
+function addForPlan(){
+    $.ajax({
+        url:"/getAllRisks",
+        type:"post",
+        data:{
+
+        },
+
+        success:function (data) {
+            console.log(data);
+            var courseList = $("#risktoaddplan-list");
+            courseList.html("");
+
+            for (var i = 0; i < data.length; i++){
+                var riskId = data[i]['riskId'];
+                var riskName = data[i]['riskName'];
+                var riskCreator = data[i]['riskCreator'];
+                var riskContent = data[i]['riskContent'];
+                var riskFollower = data[i]['riskFollower'];
+                var riskLevel = data[i]['riskLevel'];
+                var riskPossibility = data[i]['riskPossibility'];
+                var riskGate = data[i]['riskGate'];
+                var riskCreatedTime=data[i]['riskCreatedTime'];
+                var riskRec=data[i]['riskRec'];
+                var riskChange=data[i]['riskChange'];
+
+                var content = '<tr>' +
+                    '<th scope="row">' + riskId + '</th>' +
+                    '<td>' + riskName + '</td>' ;
+
+                content += '<td><a onclick="loadChooseRiskModal(this.id)" href="#" data-toggle="modal" data-target="#FollowAddModal" id=' + riskId + ':' + riskName + ':' + riskCreator + ':' + riskCreatedTime + ':' + riskContent + ':' + riskFollower + ':' + riskLevel + ':' + riskPossibility + ':' + riskGate +':' + riskRec +':' + riskChange +'>查看</a></td>';
+
+                content += '<td><label><input type="checkbox" id=' + (i+3000) +' , name=' + riskId +'></label></td>';
+
+
+                content += '</tr>';
+                courseList.append(content);
+
+            }
+
+        }
+
+    });
+
 }
 
+
+function addToThisPlan(){
+    var plan_idlist= $("#showRiskPlan-id").val()
+
+    var risk_idlist="";
+    for (var i = 3000; i < 3010; i++){
+        var selectrisk = document.getElementById(i);
+        if(selectrisk!=null){
+            if(selectrisk.checked==true) {
+                risk_idlist = risk_idlist + selectrisk.name + ";";
+            }
+        }
+    }
+
+    $.ajax({
+        url:"/addRiskToPlan",
+        type:"post",
+        data:{
+            risk_idlist:risk_idlist,
+            plan_idlist:plan_idlist
+
+        },
+        success:function() {
+            alert("添加成功");
+        },
+        error:function () {
+            alert("添加失败");
+        }
+    })
+
+}
 
 function loadCourses() {
     $.ajax({
@@ -327,6 +627,7 @@ function loadRiskForPlan() {
         success:function (data) {
             console.log(data);
             var courseList = $("#risk-list");
+            courseList.html("");
             for (var i = 0; i < data.length; i++){
                 var riskId = data[i]['riskId'];
                 var riskName = data[i]['riskName'];
@@ -375,6 +676,7 @@ function loadPlan() {
         success:function (data) {
             console.log(data);
             var courseList = $("#riskplan-list");
+            courseList.html("");
             for (var i = 0; i < data.length; i++){
                 var riskPlanId = data[i]['riskPlanId'];
                 var riskPlanName = data[i]['riskPlanName'];
@@ -404,6 +706,88 @@ function loadPlan() {
 }
 
 
+function comfirmAddToPlan(){
+    var plan_idlist="";
+    for (var i = 100; i < 110; i++){
+        var selectplan = document.getElementById(i);
+        if(selectplan!=null){
+            if(selectplan.checked==true){
+                plan_idlist=plan_idlist+selectplan.name+";";
+            }
+
+        }
+    }
+
+    var risk_idlist="";
+    for (var i = 1000; i < 1010; i++){
+        var selectrisk = document.getElementById(i);
+        if(selectrisk!=null){
+            if(selectrisk.checked==true) {
+                risk_idlist = risk_idlist + selectrisk.name + ";";
+            }
+        }
+    }
+
+    $.ajax({
+        url:"/addRiskToPlan",
+        type:"post",
+        data:{
+            risk_idlist:risk_idlist,
+            plan_idlist:plan_idlist
+
+        },
+        success:function() {
+            alert("添加成功");
+            window.location.reload();
+        },
+        error:function () {
+            alert("添加失败");
+        }
+    })
+
+
+}
+
+
+function addToPlan(){
+    $.ajax({
+        url:"/getAllRiskPlan",
+        type:"post",
+        data:{
+
+        },
+
+        success:function (data) {
+            console.log(data);
+            var courseList = $("#SelectPlan-list");
+            courseList.html("");
+            for (var i = 0; i < data.length; i++){
+                var riskPlanId = data[i]['riskPlanId'];
+                var riskPlanName = data[i]['riskPlanName'];
+                var riskPlanCreator = data[i]['riskPlanCreator'];
+                var riskPlanContent = data[i]['riskPlanContent'];
+                var riskPlanCreatedTime=data[i]['riskPlanCreatedTime'];
+
+                var content = '<tr>' +
+                    '<th scope="row">' + riskPlanId + '</th>' +
+                    '<td>' + riskPlanName + '</td>' +
+                    '<td>' + riskPlanCreator + '</td>' +
+                    '<td>' + riskPlanCreatedTime + '</td>' ;
+
+                content += '<td><a onclick="loadChoosePlanModal(this.id)" href="#" data-toggle="modal" data-target="#ShowPlanModal" id=' + riskPlanId + ':' + riskPlanName + ':' + riskPlanCreator + ':'+ riskPlanContent + ':' + riskPlanCreatedTime + '>查看</a></td>';
+                content += '<td><label><input type="checkbox" id='+(i+100)+' , name='+riskPlanId+'></label></td>';
+
+                content += '</tr>';
+                courseList.append(content);
+
+            }
+        }
+
+    });
+
+
+}
+
 function loadChoosePlanModal(str){
     var data = str.split(":")
     var modal = $('#ShowPlanModal')
@@ -427,7 +811,7 @@ function loadChoosePlanModal(str){
             console.log(data);
 
             var courseList = $("#riskForPlan-list");
-
+            courseList.html("");
 
             for (var i = 0; i < data.length; i++){
                 var riskId = data[i]['riskId'];
@@ -466,8 +850,14 @@ function loadChoosePlanModal(str){
 
 
 function loadChooseRiskModal(str){
+
     $('#ShowPlanModal').modal('hide')
+    $('#RecRiskModal').modal('hide')
+    $('#ChangeRiskModal').modal('hide')
+
     var data = str.split(":")
+
+
     var modal = $('#FollowAddModal')
     modal.find('.modal-title').html('查看 <span class="text-primary">' + data[0] + '</span> 风险')
     modal.find('.modal-body input#showRisk-id').val(data[0])
@@ -485,6 +875,13 @@ function loadChooseRiskModal(str){
 
     $('#FollowAddModal').on('hidden.bs.modal', function () {
         $('#ShowPlanModal').modal('show')
+        if(data.length>11){
+            $('#ChangeRiskModal').modal('show')
+        }
+        else{
+            $('#RecRiskModal').modal('show')
+        }
+
     })
 }
 

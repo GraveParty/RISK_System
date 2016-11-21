@@ -85,8 +85,6 @@
             </div>
         </div>
     </div>
-
-
 </div>
 
 
@@ -94,35 +92,39 @@
     <div class="row">
         <div class="col-md-1 col-md-offset-2">
             <div class="control-group">
-                <a class="btn btn-default"  onclick="findRec()"   >查找/识别</a>
+                <a class="btn btn-default"  onclick="findRec()"  href="#" data-toggle="modal" data-target="#RecRiskModal">被识别次数</a>
             </div>
         </div>
 
         <div class="col-md-1 ">
             <div class="control-group">
-                <a class="btn btn-default" onclick="findChange()">查找/演变</a>
+                <a class="btn btn-default" onclick="findChange()" href="#" data-toggle="modal" data-target="#ChangeRiskModal">演变成问题</a>
             </div>
         </div>
 
-        <div class="col-md-2 ">
+
+
+        <div class="col-md-2 col-md-offset-1">
             <div class="control-group">
-                <label class="control-label">开始时间</label>
-                <div class="controls input-append date form_datetime" data-date="2016-11-01T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-                    <input size="16" type="text" value="" readonly>
-                    <span class="add-on"><i class="icon-remove"></i></span>
-                    <span class="add-on"><i class="icon-th"></i></span>
+                <div>
+                    <div class="row">
+                        <h4><span class="label label-default">开始时间:</span></h4>
+                        <input size="16" type="text" value="2016-11-15 14:45" readonly id="startTime" class="form_datetime">
+                    </div>
                 </div>
                 <input type="hidden" id="dtp_input1" value="" /><br/>
             </div>
         </div>
 
+
+
+
         <div class="col-md-2 ">
             <div class="control-group">
-                <label class="control-label">结束时间</label>
-                <div class="controls input-append date form_datetime" data-date="2016-11-01T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-                    <input size="16" type="text" value="" readonly>
-                    <span class="add-on"><i class="icon-remove"></i></span>
-                    <span class="add-on"><i class="icon-th"></i></span>
+
+                <div>
+                    <h4><span class="label label-default">结束时间:</span></h4>
+                    <input size="16" type="text" value="2016-11-16 14:45" readonly id="endTime" class="form_datetime">
                 </div>
                 <input type="hidden" id="dtp_input2" value="" /><br/>
             </div>
@@ -132,30 +134,6 @@
 </div>
 
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <!-- Default panel contents -->
-                <div class="panel-heading">查询结果</div>
-                <!-- Table -->
-                <table class="table table-striped" id="reserchTable">
-                    <thead>
-                    <tr>
-                        <th>风险计划编号</th>
-                        <th>风险计划名称</th>
-                        <th>演变问题次数</th>
-                        <th>被识别次数</th>
-                        <th>查看</th>
-                    </tr>
-                    </thead>
-                    <tbody id="riskreserch-list">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <%--添加风险条目--%>
@@ -281,11 +259,153 @@
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="RecRiskModal" tabindex="-1" role="dialog" aria-labelledby="RecRiskModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="ShowPlanModalLabel">风险识别次数排序</h4>
+            </div>
+            <div class="modal-body">
+
+                            <table class="table table-striped" id="RecRiskTable">
+                                <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>名称</th>
+                                    <th>识别次数</th>
+                                    <th>演变问题次数</th>
+                                    <th>查看</th>
+                                    <th>删除</th>
+                                    <th>选择</th>
+                                </tr>
+                                </thead>
+                                <tbody id="riskRec-list">
+                                </tbody>
+                            </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+
+                <button type="button" class="btn btn-primary" id="showchartrec-btn" onclick="showchartrec()"  href="#" data-toggle="modal" data-target="#showchartrecModal">图表展示</button>
+
+
+
+                <button type="button" class="btn btn-primary" id="addtoplan-btn" onclick="addToPlan()"  href="#" data-toggle="modal" data-target="#SelectPlanModal">导入计划</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="showchartrecModal" tabindex="-1" role="dialog" aria-labelledby="ChangeRiskModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="showchartrecModalLabel1">各风险演变为问题次数饼图</h4>
+            </div>
+            <div class="modal-body"  id="showchartrec" >
+                <canvas id="myRecChart" width="400" height="400"></canvas>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="ChangeRiskModal" tabindex="-1" role="dialog" aria-labelledby="ChangeRiskModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="ShowPlanModalLabel2">风险演变为问题次数排序</h4>
+            </div>
+            <div class="modal-body">
+
+                <table class="table table-striped" id="ChangeRiskTable">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>名称</th>
+                        <th>识别次数</th>
+                        <th>演变问题次数</th>
+                        <th>查看</th>
+                        <th>删除</th>
+                        <th>选择</th>
+                    </tr>
+                    </thead>
+                    <tbody id="riskChange-list">
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="addtoplan-btn2" onclick="addToPlan()"  href="#" data-toggle="modal" data-target="#SelectPlanModal">导入计划</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="SelectPlanModal" tabindex="-1" role="dialog" aria-labelledby="SelectPlanModalModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="SelectPlanModalLabel">选择风险计划</h4>
+            </div>
+            <div class="modal-body">
+
+                <table class="table table-striped" id="SelectPlanTable">
+                    <thead>
+                    <tr>
+                    <tr>
+                        <th>编号</th>
+                        <th>名称</th>
+                        <th>创建者</th>
+                        <th>创建时间</th>
+                        <th>查看</th>
+                        <th>选择</th>
+                    </tr>
+                    </tr>
+                    </thead>
+                    <tbody id="SelectPlan-list">
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="comfirmaddtoplan-btn" onclick="comfirmAddToPlan()" >确定</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/js/course.js"></script>
+<script type="text/javascript" src="/assets/js/echarts.js"></script>
+<script type="text/javascript" src="/assets/js/chart.js"></script>
 <script type="text/javascript" src="/assets/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 <script type="text/javascript" src="/assets/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+
+
+
+
 <script type="text/javascript">
     $('.form_datetime').datetimepicker({
         //language:  'fr',
@@ -330,6 +450,11 @@
     loadAddModal();
     findRec();
     findChange();
+    addToPlan()
+    AddRiskToPlanModal();
+    comfirmAddToPlan();
+    showchartrec();
+
 </script>
 </body>
 </html>
